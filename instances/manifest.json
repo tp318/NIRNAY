@@ -1,0 +1,233 @@
+{
+ "transport_40x60": {
+  "path": "instances/robustness/transport_40x60.mps",
+  "category": "robustness",
+  "cls": "LP",
+  "description": "Balanced transportation LP (primal degenerate)",
+  "rows": 100,
+  "cols": 2400,
+  "nnz": 4800,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "assign_60": {
+  "path": "instances/robustness/assign_60.mps",
+  "category": "robustness",
+  "cls": "LP",
+  "description": "Assignment LP, 3600 vars (massively degenerate)",
+  "rows": 120,
+  "cols": 3600,
+  "nnz": 7200,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "degen_400x800": {
+  "path": "instances/robustness/degen_400x800.mps",
+  "category": "robustness",
+  "cls": "LP",
+  "description": "Every row active at a known vertex (primal degeneracy)",
+  "rows": 400,
+  "cols": 800,
+  "nnz": 2901,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "illcond_300x500": {
+  "path": "instances/robustness/illcond_300x500.mps",
+  "category": "robustness",
+  "cls": "LP",
+  "description": "Row/col scaling over 8 decades + near-parallel rows",
+  "rows": 300,
+  "cols": 500,
+  "nnz": 2287,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "illcond_1200x2000": {
+  "path": "instances/robustness/illcond_1200x2000.mps",
+  "category": "robustness",
+  "cls": "LP",
+  "description": "Larger ill-conditioned LP",
+  "rows": 1200,
+  "cols": 2000,
+  "nnz": 9169,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "mcf_12x12_k8": {
+  "path": "instances/scale/mcf_12x12_k8.mps",
+  "category": "scale",
+  "cls": "LP",
+  "description": "Multicommodity flow on 12x12 grid, 8 commodities",
+  "rows": 1680,
+  "cols": 4224,
+  "nnz": 12672,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "mcf_25x25_k16": {
+  "path": "instances/scale/mcf_25x25_k16.mps",
+  "category": "scale",
+  "cls": "LP",
+  "description": "Multicommodity flow, 25x25 grid, 16 commodities",
+  "rows": 12400,
+  "cols": 38400,
+  "nnz": 115200,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "mknap_60x5": {
+  "path": "instances/milp/mknap_60x5.mps",
+  "category": "milp",
+  "cls": "MILP",
+  "description": "Multi-dimensional knapsack",
+  "rows": 5,
+  "cols": 60,
+  "nnz": 300,
+  "integers": 60,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "cfl_15x60": {
+  "path": "instances/milp/cfl_15x60.mps",
+  "category": "milp",
+  "cls": "MILP",
+  "description": "Capacitated facility location, weak aggregated big-M",
+  "rows": 75,
+  "cols": 915,
+  "nnz": 1815,
+  "integers": 15,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "setcover_200x120": {
+  "path": "instances/milp/setcover_200x120.mps",
+  "category": "milp",
+  "cls": "MILP",
+  "description": "Set covering",
+  "rows": 200,
+  "cols": 120,
+  "nnz": 680,
+  "integers": 120,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "uc_10g_24h": {
+  "path": "instances/industrial/uc_10g_24h.mps",
+  "category": "industrial",
+  "cls": "MILP",
+  "description": "Power dispatch: unit commitment, 10 units x 24 h",
+  "rows": 1708,
+  "cols": 1200,
+  "nnz": 7914,
+  "integers": 480,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "gasblend_6p": {
+  "path": "instances/industrial/gasblend_6p.mps",
+  "category": "industrial",
+  "cls": "LP",
+  "description": "Refinery: multi-period gasoline blending (RON/RVP/S/Bz/Aro/Ole)",
+  "rows": 138,
+  "cols": 222,
+  "nnz": 911,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "refplan_4p": {
+  "path": "instances/industrial/refplan_4p.mps",
+  "category": "industrial",
+  "cls": "MILP",
+  "description": "Refinery: 4-period planning, crude cargoes + FCC modes",
+  "rows": 146,
+  "cols": 186,
+  "nnz": 604,
+  "integers": 32,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "refplan_8p": {
+  "path": "instances/industrial/refplan_8p.mps",
+  "category": "industrial",
+  "cls": "MILP",
+  "description": "Refinery: 8-period planning",
+  "rows": 294,
+  "cols": 374,
+  "nnz": 1220,
+  "integers": 64,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "crudesched_15": {
+  "path": "instances/industrial/crudesched_15.mps",
+  "category": "industrial",
+  "cls": "MILP",
+  "description": "Refinery: crude unloading & tank scheduling (5 days, 8h slots)",
+  "rows": 421,
+  "cols": 311,
+  "nnz": 1173,
+  "integers": 110,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "portfolio_200": {
+  "path": "instances/qp/portfolio_200.mps",
+  "category": "qp",
+  "cls": "QP",
+  "description": "Markowitz portfolio QP, factor covariance, 200 assets",
+  "rows": 9,
+  "cols": 200,
+  "nnz": 400,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "blendqp_12p": {
+  "path": "instances/qp/blendqp_12p.mps",
+  "category": "qp",
+  "cls": "QP",
+  "description": "Blending with quadratic quality-deviation and recipe-smoothing penalties",
+  "rows": 36,
+  "cols": 96,
+  "nnz": 240,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "bls_400x300": {
+  "path": "instances/qp/bls_400x300.mps",
+  "category": "qp",
+  "cls": "QP",
+  "description": "Bounded sparse least squares",
+  "rows": 1,
+  "cols": 300,
+  "nnz": 300,
+  "integers": 0,
+  "source": "synthetic (NIRNAY generator)"
+ },
+ "mcf_40x40_k24": {
+  "path": "instances/gpu/mcf_40x40_k24.mps",
+  "category": "gpu",
+  "cls": "LP",
+  "description": "Large multicommodity flow (~180k vars)",
+  "source": "synthetic (NIRNAY generator)",
+  "rows": 44640,
+  "cols": 149760,
+  "nnz": 449280,
+  "integers": 0
+ },
+ "mcf_60x60_k32": {
+  "path": "instances/gpu/mcf_60x60_k32.mps",
+  "category": "gpu",
+  "cls": "LP",
+  "description": "Large multicommodity flow (~450k vars)",
+  "source": "synthetic (NIRNAY generator)",
+  "rows": 129360,
+  "cols": 453120,
+  "nnz": 1359360,
+  "integers": 0
+ },
+ "mcf_90x90_k40": {
+  "path": "instances/gpu/mcf_90x90_k40.mps",
+  "category": "gpu",
+  "cls": "LP",
+  "description": "Very large multicommodity flow (~1.3M vars)",
+  "source": "synthetic (NIRNAY generator)",
+  "rows": 356040,
+  "cols": 1281600,
+  "nnz": 3844800,
+  "integers": 0
+ }
+}

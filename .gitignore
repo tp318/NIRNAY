@@ -1,0 +1,8 @@
+bin/
+build/
+scratch/
+results/_last.json
+# large generated LPs (>100 MB); regenerate with: python tools/generate.py gpu
+instances/gpu/
+__pycache__/
+*.pyc
