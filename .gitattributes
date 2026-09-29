@@ -1,0 +1,7 @@
+*.sh        text eol=lf
+Makefile    text eol=lf
+Dockerfile  text eol=lf
+*.yml       text eol=lf
+*.bat       text eol=crlf
+*.mps       text eol=lf
+*.qps       text eol=lf

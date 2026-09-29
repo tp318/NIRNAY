@@ -22,6 +22,7 @@ struct IpmOptions {
     int max_iter = 300;
     double time_limit = 1e30;
     int max_correctors = 2;
+    double log_scale = 1.0;  // iteration log shows log_scale * (obj + offset): the user-space objective
 };
 
 // Requires: no fixed columns (lo == up) and no free rows. Model assumed scaled.

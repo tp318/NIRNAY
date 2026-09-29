@@ -6,8 +6,10 @@
 //   * fused KKT-residual kernels (original-space weights) for termination checks
 #include <cuda_runtime.h>
 
+#include <algorithm>
 #include <cmath>
 #include <cstdio>
+#include <cstdlib>
 #include <string>
 #include <vector>
 

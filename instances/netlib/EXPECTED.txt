@@ -1,0 +1,11 @@
+# Netlib LP test set: published optimal objective values (minimisation).
+# Source: Netlib lp/data "readme" table (Gay, 1985 and later updates).
+# name      optimal objective
+afiro      -4.6475314286e+02
+sc50a      -6.4575077059e+01
+sc105      -5.2202061212e+01
+adlittle    2.2549496316e+05
+blend      -3.0812149846e+01
+kb2        -1.7499001299e+03
+share2b    -4.1573224074e+02
+stocfor1   -4.1131976219e+04

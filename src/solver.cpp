@@ -256,6 +256,7 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
             IpmOptions io;
             io.tol = opt.tol;
             io.time_limit = opt.time_limit;
+            io.log_scale = (red.maximize ? -1.0 : 1.0) / sc.obj;
             LpSolution s = solve_ipm(sm, io);
             res.method = "ipm";
             res.status = s.status;

@@ -4,14 +4,21 @@ LP / MILP / QP solver written from scratch in C++17: presolve, scaling, interior
 dual simplex, branch-and-cut (GMI cuts, strong branching, diving heuristics), and a PDHG
 first-order method with an optional CUDA backend.
 
-## Build
+## Quick start (no build needed)
 
-- Linux/macOS: `make` (CPU-only, OpenMP), or `make CUDA=1` with nvcc.
-- Windows: `build.bat` (MSVC 2019, CUDA if `nvcc` is on PATH) or `build.bat cpu`.
+    docker run --rm ghcr.io/tp318/nirnay:latest solve afiro.mps
+
+or download a static binary from Releases. See **[DEPLOY.md](DEPLOY.md)** for copy-paste
+commands, the expected output, and how to verify it against the published Netlib optima.
+
+## Build from source
+
+- Linux/macOS: `make` (OpenMP), `make CUDA=1` (with nvcc), or `sh build.sh` for the static release binary.
+- Windows: `build.bat` (MSVC, CUDA if `nvcc` is on PATH), `build.bat cpu`, or `build-release.bat` for the static exe.
 
 ## Run
 
-    bin/nirnay instances/industrial/gasblend_6p.mps --method ipm|simplex|pdhg [--device cpu|gpu] [--time-limit s] [--json out.json]
+    nirnay solve instances/netlib/afiro.mps [--method auto|ipm|simplex|pdhg] [--device cpu|gpu] [--time-limit s] [--json out.json]
 
 ## Benchmarks
 

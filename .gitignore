@@ -6,3 +6,5 @@ results/_last.json
 instances/gpu/
 __pycache__/
 *.pyc
+dist/
+NIRNAY.zip

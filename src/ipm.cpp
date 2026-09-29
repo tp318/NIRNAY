@@ -343,7 +343,8 @@ LpSolution Ipm::run() {
         const double pinf = std::max(inf_norm(rp_), std::max(inf_norm(rbl_), inf_norm(rbu_))) / (1.0 + bnorm);
         const double dinf = inf_norm(rd_) / (1.0 + cnorm);
         const double gap = std::fabs(pobj - dobj) / (1.0 + std::fabs(pobj));
-        NLOG("%5d %15.8e %15.8e %9.2e %9.2e %9.2e %6.3f\n", it, pobj, dobj, pinf, dinf, mu, last_step);
+        NLOG("%5d %15.8e %15.8e %9.2e %9.2e %9.2e %6.3f\n", it, opt_.log_scale * (pobj + mdl_.obj_offset),
+             opt_.log_scale * (dobj + mdl_.obj_offset), pinf, dinf, mu, last_step);
 
         sol.pinf = pinf; sol.dinf = dinf; sol.gap = gap;
         sol.obj = pobj + mdl_.obj_offset; sol.dual_obj = dobj + mdl_.obj_offset;

@@ -1,0 +1,57 @@
+# On a version tag (v*), build the static binaries, attach them to a GitHub Release,
+# and push the Docker image to GitHub Container Registry (ghcr.io/<owner>/nirnay).
+name: release
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build static binary
+        run: NIRNAY_VERSION="${GITHUB_REF_NAME#v}" sh build.sh
+      - name: Netlib check
+        run: python3 tools/check_netlib.py dist/nirnay-linux-x86_64
+      - uses: actions/upload-artifact@v4
+        with: { name: linux, path: dist/nirnay-linux-x86_64 }
+      - name: Push image to GHCR
+        run: |
+          IMG=ghcr.io/$(echo "$GITHUB_REPOSITORY_OWNER" | tr A-Z a-z)/nirnay
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          docker build --build-arg NIRNAY_VERSION="${GITHUB_REF_NAME#v}" -t "$IMG:${GITHUB_REF_NAME#v}" -t "$IMG:latest" .
+          docker run --rm "$IMG:latest" solve afiro.mps
+          docker push "$IMG:${GITHUB_REF_NAME#v}"
+          docker push "$IMG:latest"
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build static exe
+        shell: cmd
+        run: |
+          set NIRNAY_VERSION=%GITHUB_REF_NAME:~1%
+          build-release.bat
+      - name: Netlib check
+        run: python tools/check_netlib.py dist/nirnay-windows-x86_64.exe
+      - uses: actions/upload-artifact@v4
+        with: { name: windows, path: dist/nirnay-windows-x86_64.exe }
+
+  publish:
+    needs: [linux, windows]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { path: dist, merge-multiple: true }
+      - name: Create release with assets
+        env: { GH_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
+        run: |
+          cd dist && chmod +x nirnay-linux-x86_64 && sha256sum nirnay-* > SHA256SUMS.txt && cd ..
+          gh release create "$GITHUB_REF_NAME" dist/* --title "NIRNAY $GITHUB_REF_NAME" --notes-file DEPLOY.md

@@ -8,8 +8,16 @@
 #include <cstring>
 #include <string>
 
+#ifdef _OPENMP
+#include <omp.h>
+#endif
+
 #include "mps.hpp"
 #include "solver.hpp"
+
+#ifndef NIRNAY_VERSION
+#define NIRNAY_VERSION "0.1.0"
+#endif
 
 using namespace nirnay;
 
@@ -17,8 +25,10 @@ namespace {
 
 void usage() {
     std::printf(
-        "NIRNAY optimisation engine (LP / convex QP / MILP)\n"
-        "usage: nirnay <model.mps|.qps> [options]\n"
+        "NIRNAY " NIRNAY_VERSION " optimisation engine (LP / convex QP / MILP)\n"
+        "usage: nirnay [solve] <model.mps|.qps> [options]\n"
+        "  --threads <n>                    CPU threads for parallel kernels (default: all cores)\n"
+        "  --version\n"
         "  --method auto|ipm|simplex|pdhg   continuous engine (default auto)\n"
         "  --device auto|cpu|gpu            PDHG backend (default auto)\n"
         "  --presolve on|off                (default on)\n"
@@ -88,13 +98,16 @@ int main(int argc, char** argv) {
     if (argc < 2) { usage(); return 1; }
     std::string file, json, solfile;
     SolverOptions opt;
-    for (int a = 1; a < argc; ++a) {
+    int first = 1;
+    if (std::strcmp(argv[1], "solve") == 0) first = 2;  // `nirnay solve model.mps` == `nirnay model.mps`
+    for (int a = first; a < argc; ++a) {
         std::string s = argv[a];
         auto next = [&]() -> std::string {
             if (a + 1 >= argc) { std::fprintf(stderr, "missing value for %s\n", s.c_str()); std::exit(1); }
             return argv[++a];
         };
         if (s == "--help" || s == "-h") { usage(); return 0; }
+        else if (s == "--version") { std::printf("NIRNAY %s\n", NIRNAY_VERSION); return 0; }
         else if (s == "--method") opt.method = next();
         else if (s == "--device") opt.device = next();
         else if (s == "--presolve") opt.presolve = next() == "off" ? 0 : 1;
@@ -119,6 +132,9 @@ int main(int argc, char** argv) {
         else file = s;
     }
     if (file.empty()) { usage(); return 1; }
+#ifdef _OPENMP
+    if (opt.threads > 0) omp_set_num_threads(opt.threads);
+#endif
 
     Model mdl;
     Timer tr;

@@ -1,0 +1,40 @@
+# Builds both release binaries and the Docker image on every push, and checks them
+# against the published Netlib optimal values. Nothing is published.
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build static binary (Alpine/musl)
+        run: sh build.sh
+      - name: Binary is static and runs from a clean directory
+        run: |
+          file dist/nirnay-linux-x86_64
+          if ldd dist/nirnay-linux-x86_64; then echo "binary is dynamically linked"; exit 1; fi
+          d=$(mktemp -d); cp dist/nirnay-linux-x86_64 instances/netlib/afiro.mps "$d"; cd "$d"
+          ./nirnay-linux-x86_64 solve afiro.mps
+      - name: Netlib check
+        run: python3 tools/check_netlib.py dist/nirnay-linux-x86_64
+      - name: Docker image
+        run: |
+          docker build -t nirnay .
+          docker run --rm nirnay solve afiro.mps
+          docker run --rm -v "$PWD/instances/netlib:/data" nirnay solve /data/sc50a.mps
+          docker images nirnay
+
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build static exe
+        shell: cmd
+        run: build-release.bat
+      - name: Netlib check
+        run: python tools/check_netlib.py dist/nirnay-windows-x86_64.exe

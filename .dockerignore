@@ -1,0 +1,7 @@
+*
+!Makefile
+!src/
+!instances/netlib/
+!instances/industrial/gasblend_6p.mps
+!instances/milp/setcover_200x120.mps
+!instances/qp/portfolio_200.mps
