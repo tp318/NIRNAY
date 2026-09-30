@@ -17,6 +17,12 @@ struct SolverOptions {
     double tol = 1e-8;             // IPM / simplex optimality tolerance
     double pdhg_tol = 1e-4;        // PDHG relative KKT tolerance
     int pdhg_max_iter = 1000000;
+    std::string pdhg_alg = "halpern";   // halpern | pdlp
+    double pdhg_reflection = 1.0;
+    int pdhg_check = 0;              // 0 = adaptive
+    bool pdhg_compress = true, pdhg_graphs = true;
+    std::string pdhg_precision = "auto";  // fp64 | mixed | auto
+    std::string crossover = "auto";  // after PDHG: on | off | auto (on when rows + cols <= 500k)
     double mip_gap = 1e-4;         // relative MIP gap
     long long node_limit = 10000000;
     bool cuts = true;

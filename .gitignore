@@ -8,3 +8,9 @@ __pycache__/
 *.pyc
 dist/
 NIRNAY.zip
+instances/bench/
+/clone*.log
+/cplex.log
+results/_*.json
+results/pd_err.txt
+results/*.log

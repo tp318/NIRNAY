@@ -42,10 +42,64 @@ void unscaled_violation(const DualSimplex& ds, const Model& sm, const Scaling& s
     }
 }
 
-LpSolution solve_simplex_lp(const Model& sm, const Scaling& sc, const SolverOptions& opt) {
+// Crossover basis from an approximate primal-dual point (x, y) of the UNSCALED model `red`,
+// expressed for the simplex on the scaled model `sm`. Each of the n + m simplex variables
+// (columns, then row activities) gets a basic-ness score: relative distance to its nearest bound
+// minus the relative size of its reduced cost (dual). The m highest scores form the basis; the
+// rest sit at their nearest bound. The simplex repairs a singular guess with logical columns.
+DualSimplex::Basis crossover_basis(const Model& sm, const Scaling& sc, const std::vector<double>& x,
+                                   const std::vector<double>& y) {
+    const int m = sm.m, n = sm.n, N = n + m;
+    std::vector<double> xs(n), ys(m), act(m, 0.0), rc(n);
+    for (int j = 0; j < n; ++j) xs[j] = x[j] / sc.col[j];
+    for (int i = 0; i < m; ++i) ys[i] = y[i] * sc.obj / sc.row[i];
+    for (int j = 0; j < n; ++j) {
+        double d = sm.c[j];
+        for (int p = sm.A.colptr[j]; p < sm.A.colptr[j + 1]; ++p) {
+            act[sm.A.rowidx[p]] += sm.A.val[p] * xs[j];
+            d -= sm.A.val[p] * ys[sm.A.rowidx[p]];
+        }
+        rc[j] = d;
+    }
+    double cmax = 1.0;
+    for (int j = 0; j < n; ++j) cmax = std::max(cmax, std::fabs(sm.c[j]));
+    std::vector<double> score(N), val(N), lo(N), up(N);
+    for (int k = 0; k < N; ++k) {
+        const bool col = k < n;
+        lo[k] = col ? sm.col_lo[k] : sm.row_lo[k - n];
+        up[k] = col ? sm.col_up[k] : sm.row_up[k - n];
+        val[k] = col ? xs[k] : act[k - n];
+        const double dual = col ? rc[k] : ys[k - n];
+        double dist = std::min(is_finite(lo[k]) ? val[k] - lo[k] : kInf, is_finite(up[k]) ? up[k] - val[k] : kInf);
+        dist = std::max(dist, 0.0);
+        if (lo[k] == up[k]) score[k] = -kInf;                       // fixed: never basic by choice
+        else score[k] = std::min(dist, 1e6) / (1.0 + std::fabs(val[k])) - std::fabs(dual) / cmax;
+    }
+    std::vector<int> ord(N);
+    for (int k = 0; k < N; ++k) ord[k] = k;
+    std::nth_element(ord.begin(), ord.begin() + m, ord.end(), [&](int a, int b) { return score[a] > score[b]; });
+    DualSimplex::Basis b;
+    b.head.assign(ord.begin(), ord.begin() + m);
+    b.status.assign(N, DualSimplex::AT_LO);
+    for (int k : b.head) b.status[k] = DualSimplex::BASIC;
+    for (int k = 0; k < N; ++k) {
+        if (b.status[k] == DualSimplex::BASIC) continue;
+        const bool fl = is_finite(lo[k]), fu = is_finite(up[k]);
+        if (fl && fu && lo[k] == up[k]) b.status[k] = DualSimplex::FIXED;
+        else if (fl && fu) b.status[k] = (val[k] - lo[k] <= up[k] - val[k]) ? DualSimplex::AT_LO : DualSimplex::AT_UP;
+        else if (fl) b.status[k] = DualSimplex::AT_LO;
+        else if (fu) b.status[k] = DualSimplex::AT_UP;
+        else b.status[k] = DualSimplex::AT_ZERO;
+    }
+    return b;
+}
+
+LpSolution solve_simplex_lp(const Model& sm, const Scaling& sc, const SolverOptions& opt,
+                            const DualSimplex::Basis* warm = nullptr) {
     LpSolution s;
     DualSimplex ds;
     ds.load(sm);
+    if (warm) ds.set_basis(*warm);
     SimplexOptions so;
     so.time_limit = opt.time_limit;
     SimplexResult r = ds.solve(so);
@@ -189,6 +243,7 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
 
     std::vector<double> xr, yr;
     Timer ts;
+    bool pdhg_needs_check = false;
     if (red.n == 0) {
         res.status = Status::Optimal;
         res.method = "presolve";
@@ -239,6 +294,14 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
                 po.max_iter = opt.pdhg_max_iter;
                 po.time_limit = opt.time_limit;
                 po.device = opt.device;
+                po.alg = opt.pdhg_alg;
+                po.reflection = opt.pdhg_reflection;
+                po.check_every = opt.pdhg_check;
+                po.compress = opt.pdhg_compress;
+                po.graphs = opt.pdhg_graphs;
+                po.precision = opt.pdhg_precision;
+                const bool xo = opt.crossover == "on" || (opt.crossover == "auto" && (long long)red.m + red.n <= 500000);
+                po.strict = !xo;   // crossover only needs the active set; it certifies the final answer itself
                 PdhgInfo info;
                 LpSolution s = solve_pdhg(red, po, info);
                 res.method = "pdhg-" + info.device;
@@ -246,9 +309,39 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
                 res.iterations = s.iterations;
                 xr = s.x; yr = s.y;
                 char buf[200];
-                std::snprintf(buf, sizeof buf, "PDHG device %s; restarts %d; rel. primal %.2e dual %.2e gap %.2e; %.3f ms/iter",
-                              info.device.c_str(), info.restarts, s.pinf, s.dinf, s.gap, info.ms_per_iter);
+                std::snprintf(buf, sizeof buf, "PDHG %s device %s [%s]; restarts %d; rel. primal %.2e dual %.2e gap %.2e; %.4f ms/iter",
+                              po.alg.c_str(), info.device.c_str(), info.matrix_format.c_str(), info.restarts, s.pinf, s.dinf, s.gap, info.ms_per_iter);
                 res.note = buf;
+                // Crossover: finish exactly with the dual simplex warm-started from a basis guessed from the
+                // PDHG point. Runs whenever PDHG produced a point, including after a time/iteration limit.
+                const double left = opt.time_limit - ts.seconds();
+                if (xo && !s.x.empty() && left > 0) {
+                    Timer tx;
+                    Scaling sc = compute_scaling(red, false);
+                    Model sm = apply_scaling(red, sc);
+                    DualSimplex::Basis wb = crossover_basis(sm, sc, s.x, s.y);
+                    SolverOptions o2 = opt;
+                    o2.time_limit = left;
+                    LpSolution s2 = solve_simplex_lp(sm, sc, o2, &wb);
+                    NLOG("Crossover: %s after %d simplex iterations, %.3fs\n", status_name(s2.status), s2.iterations, tx.seconds());
+                    if (s2.status == Status::Optimal) {
+                        xr = s2.x; yr = s2.y;
+                        std::vector<double> zr = s2.z;
+                        unscale_primal(sc, xr);
+                        unscale_dual(sc, yr, zr);
+                        res.status = Status::Optimal;
+                        res.method += "+crossover";
+                        res.iterations += s2.iterations;
+                        char b2[96];
+                        std::snprintf(b2, sizeof b2, "; crossover %d simplex iters %.3fs", s2.iterations, tx.seconds());
+                        res.note += b2;
+                    } else {
+                        res.note += std::string("; crossover ") + status_name(s2.status);
+                        pdhg_needs_check = res.status == Status::Optimal;
+                    }
+                } else if (xo) {
+                    pdhg_needs_check = res.status == Status::Optimal;
+                }
             }
         } else if (method == "ipm") {
             Scaling sc = compute_scaling(red, false);
@@ -310,6 +403,15 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
         if (xr.empty()) xr.assign(red.n, 0.0);
         pre.postsolve(xr, yr, res.x, res.y, res.duals_valid);
         finalize(model, res);
+    }
+    // PDHG stopped on the l2 criterion for crossover, and crossover did not finish: keep "optimal" only if
+    // the independent original-model check agrees at the requested tolerance.
+    // (An unavailable check counts as a failure: greenbeb reached this point with no KKT report and a row
+    // violated by 0.63 when crossover ran out of time.)
+    if (pdhg_needs_check && (!res.kkt.available ||
+        std::max(res.kkt.primal_inf, std::max(res.kkt.dual_inf, res.kkt.rel_gap)) > 10 * opt.pdhg_tol)) {
+        res.status = Status::Feasible;
+        res.note += "; approximate (original-model KKT above tolerance)";
     }
     res.time_total = total.seconds();
     return res;

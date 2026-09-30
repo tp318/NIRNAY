@@ -35,6 +35,11 @@ void usage() {
         "  --time-limit <sec>\n"
         "  --tol <eps>                      IPM/simplex tolerance (default 1e-8)\n"
         "  --pdhg-tol <eps>                 PDHG relative KKT tolerance (default 1e-4)\n"
+        "  --pdhg-alg halpern|pdlp          PDHG variant (default halpern)\n"
+        "  --crossover on|off|auto          simplex crossover after PDHG (auto: rows + cols <= 500k)\n"
+        "  --pdhg-check <n>                 iterations between KKT checks (default adaptive)\n"
+        "  --pdhg-compress on|off           GPU: lossless compressed matrix (default on)\n"
+        "  --pdhg-graphs on|off             GPU: CUDA-graph iteration batches (default on)\n"
         "  --gap <rel>                      MIP relative gap (default 1e-4)\n"
         "  --node-limit <n>\n"
         "  --no-cuts  --no-heuristics\n"
@@ -114,6 +119,13 @@ int main(int argc, char** argv) {
         else if (s == "--time-limit") opt.time_limit = std::atof(next().c_str());
         else if (s == "--tol") opt.tol = std::atof(next().c_str());
         else if (s == "--pdhg-tol") opt.pdhg_tol = std::atof(next().c_str());
+        else if (s == "--pdhg-alg") opt.pdhg_alg = next();
+        else if (s == "--crossover") opt.crossover = next();
+        else if (s == "--pdhg-precision") opt.pdhg_precision = next();
+        else if (s == "--pdhg-reflect") opt.pdhg_reflection = std::atof(next().c_str());
+        else if (s == "--pdhg-check") opt.pdhg_check = std::atoi(next().c_str());
+        else if (s == "--pdhg-compress") opt.pdhg_compress = next() != "off";
+        else if (s == "--pdhg-graphs") opt.pdhg_graphs = next() != "off";
         else if (s == "--pdhg-max-iter") opt.pdhg_max_iter = std::atoi(next().c_str());
         else if (s == "--gap") opt.mip_gap = std::atof(next().c_str());
         else if (s == "--node-limit") opt.node_limit = std::atoll(next().c_str());

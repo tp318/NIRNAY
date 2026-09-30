@@ -1,0 +1,4377 @@
+[
+ {
+  "instance": "25fv47",
+  "reference": 5501.845888286754,
+  "ref_source": "HiGHS",
+  "highs_time": 0.1293844000001627,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 5501.845910746942,
+   "time": 0.2572451,
+   "wall": 0.2967760999999882,
+   "iterations": 18,
+   "method": "ipm",
+   "kkt": [
+    1.6822500984818821e-12,
+    4.244936013456919e-09,
+    6.076024616168434e-09
+   ],
+   "viol": 1.6822500984818821e-12,
+   "relerr": 4.082300316398133e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 5501.84588828675,
+   "time": 0.6009895,
+   "wall": 0.6945894000000408,
+   "iterations": 5227,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.1368683772161603e-12,
+    6.174227795696652e-14,
+    1.983325835910893e-15
+   ],
+   "viol": 1.1368683772161603e-12,
+   "relerr": 8.265359665100871e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 5501.84588828675,
+   "time": 0.4698028,
+   "wall": 0.5264873999994961,
+   "iterations": 5227,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.1368683772161603e-12,
+    6.174227795696652e-14,
+    1.983325835910893e-15
+   ],
+   "viol": 1.1368683772161603e-12,
+   "relerr": 8.265359665100871e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "80bau3b",
+  "reference": 987224.19240909,
+  "ref_source": "HiGHS",
+  "highs_time": 0.1548270000002958,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 987224.1952724943,
+   "time": 1.1114114,
+   "wall": 1.169827599999735,
+   "iterations": 36,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 9.243475237592787e-13,
+   "relerr": 2.9004600607026986e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 987224.1924090898,
+   "time": 1.1252967,
+   "wall": 1.2344060000004902,
+   "iterations": 26339,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 1.5174736467393757e-12,
+   "relerr": 2.3584373787042317e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 987224.1924090909,
+   "time": 1.7811729,
+   "wall": 1.821487100000013,
+   "iterations": 25580,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 9.094947017729282e-13,
+   "relerr": 9.433749514816927e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "adlittle",
+  "reference": 225494.96316238033,
+  "ref_source": "HiGHS",
+  "highs_time": 0.004852699999901233,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 225494.96316650024,
+   "time": 0.003268,
+   "wall": 0.04183560000001307,
+   "iterations": 10,
+   "method": "ipm",
+   "kkt": [
+    5.684341886080802e-14,
+    2.6052018729428917e-08,
+    3.1447929363554654e-11
+   ],
+   "viol": 4.547473508864641e-13,
+   "relerr": 1.8270515127462046e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 225494.96316237483,
+   "time": 0.2127662,
+   "wall": 0.3178626999997505,
+   "iterations": 3659,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.6544987602173933e-11,
+    7.002335219600095e-14,
+    2.232839381425805e-14
+   ],
+   "viol": 1.6544987602173933e-11,
+   "relerr": 2.4393555754775934e-14,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 225494.96316237483,
+   "time": 0.1337052,
+   "wall": 0.17009890000008454,
+   "iterations": 3659,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.6544987602173933e-11,
+    7.002335219600095e-14,
+    2.232839381425805e-14
+   ],
+   "viol": 1.6544987602173933e-11,
+   "relerr": 2.4393555754775934e-14,
+   "agree": true
+  }
+ },
+ {
+  "instance": "afiro",
+  "reference": -464.7531428571429,
+  "ref_source": "HiGHS",
+  "highs_time": 0.002610399999866786,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -464.75314285586904,
+   "time": 0.0004969,
+   "wall": 0.03506440000001021,
+   "iterations": 8,
+   "method": "ipm",
+   "kkt": [
+    3.721095188978594e-14,
+    5.551115123125783e-17,
+    5.465352577971911e-12
+   ],
+   "viol": 3.721095188978594e-14,
+   "relerr": 2.7409411560714727e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -464.75314285714285,
+   "time": 0.1241712,
+   "wall": 0.20598859999972774,
+   "iterations": 198,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.4210854715202004e-14,
+    4.163336342344337e-17,
+    1.2204623786777794e-16
+   ],
+   "viol": 2.1316282072803006e-14,
+   "relerr": 1.2230884230573284e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -464.75314285714285,
+   "time": 0.0098745,
+   "wall": 0.04762459999983548,
+   "iterations": 198,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.4210854715202004e-14,
+    4.163336342344337e-17,
+    1.2204623786777794e-16
+   ],
+   "viol": 2.1316282072803006e-14,
+   "relerr": 1.2230884230573284e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "agg",
+  "reference": -35991767.28657651,
+  "ref_source": "HiGHS",
+  "highs_time": 0.006649900000411435,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -35991767.286485545,
+   "time": 0.0412896,
+   "wall": 0.08652129999973113,
+   "iterations": 16,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 1.202092115762778e-10,
+   "relerr": 2.5273595981981413e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -35991767.28657651,
+   "time": 0.4563857,
+   "wall": 0.5301296999996339,
+   "iterations": 32409,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 9.022187441587448e-10,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -35991767.28657651,
+   "time": 1.4301004,
+   "wall": 1.4679882000000362,
+   "iterations": 32409,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 9.022187441587448e-10,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "agg2",
+  "reference": -20239252.35597711,
+  "ref_source": "HiGHS",
+  "highs_time": 0.011111500000424712,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -20239252.355023026,
+   "time": 0.0810686,
+   "wall": 0.11267440000028728,
+   "iterations": 15,
+   "method": "ipm",
+   "kkt": [
+    5.820819060043878e-11,
+    1.2133211388134393e-08,
+    1.2188430727969803e-09
+   ],
+   "viol": 5.820819060043878e-11,
+   "relerr": 4.714028371988346e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -20239252.355977125,
+   "time": 0.278672,
+   "wall": 0.34682820000034553,
+   "iterations": 6449,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.2223608791828156e-09,
+    1.28440380287748e-12,
+    3.1290647910758887e-15
+   ],
+   "viol": 1.2223608791828156e-09,
+   "relerr": 7.362505754540387e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -20239252.355977125,
+   "time": 0.3065183,
+   "wall": 0.3466504000007262,
+   "iterations": 6449,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.2223608791828156e-09,
+    1.28440380287748e-12,
+    3.1290647910758887e-15
+   ],
+   "viol": 1.2223608791828156e-09,
+   "relerr": 7.362505754540387e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "agg3",
+  "reference": 10312115.935089217,
+  "ref_source": "HiGHS",
+  "highs_time": 0.009126599999945029,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 10312115.93522507,
+   "time": 0.0810039,
+   "wall": 0.11421019999943383,
+   "iterations": 15,
+   "method": "ipm",
+   "kkt": [
+    1.1641500231255458e-10,
+    2.848644908376263e-11,
+    5.007572217231412e-11
+   ],
+   "viol": 1.1641500231255458e-10,
+   "relerr": 1.3174020231569914e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "FEASIBLE",
+   "objective": 10312128.907479845,
+   "time": 0.2670625,
+   "wall": 0.35097180000047956,
+   "iterations": 5547,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)",
+   "kkt": [
+    11.838503281524709,
+    6.012116053095788e-05,
+    4.6723706115801275e-06
+   ],
+   "viol": 18.05922881932929,
+   "relerr": 1.2579756384765918e-06,
+   "agree": false
+  },
+  "pdhg-cpu": {
+   "status": "FEASIBLE",
+   "objective": 10312128.90745488,
+   "time": 0.3523677,
+   "wall": 0.3945628999999826,
+   "iterations": 5547,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": [
+    11.838503283416912,
+    6.012116050346598e-05,
+    4.6723681758414965e-06
+   ],
+   "viol": 18.05922881932929,
+   "relerr": 1.2579732175347508e-06,
+   "agree": false
+  }
+ },
+ {
+  "instance": "bandm",
+  "reference": -158.62801845012024,
+  "ref_source": "HiGHS",
+  "highs_time": 0.014461299999766197,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -158.6280184066482,
+   "time": 0.0094382,
+   "wall": 0.03962560000036319,
+   "iterations": 14,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 2.3803181647963356e-13,
+   "relerr": 2.740501216625358e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -158.6280184985509,
+   "time": 0.2531793,
+   "wall": 0.3245552999997017,
+   "iterations": 8238,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 2.153421291950508e-06,
+   "relerr": 3.053095549324791e-10,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -158.6280184985509,
+   "time": 0.3910065,
+   "wall": 0.4237654000007751,
+   "iterations": 8238,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 2.153421291950508e-06,
+   "relerr": 3.053095549324791e-10,
+   "agree": true
+  }
+ },
+ {
+  "instance": "beaconfd",
+  "reference": 33592.4858072,
+  "ref_source": "HiGHS",
+  "highs_time": 0.006058300000404415,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 33592.48580931518,
+   "time": 0.0068014,
+   "wall": 0.034672100000534556,
+   "iterations": 8,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 3.935873849059135e-11,
+   "relerr": 6.296583998706882e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 33592.48580719999,
+   "time": 0.4788806,
+   "wall": 0.5514758999997866,
+   "iterations": 27873,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 4.0730796513344103e-10,
+   "relerr": 2.1659479610835895e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 33592.48580719999,
+   "time": 1.0175143,
+   "wall": 1.0577376000001095,
+   "iterations": 27873,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 4.0730796513344103e-10,
+   "relerr": 2.1659479610835895e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "blend",
+  "reference": -30.81214984582823,
+  "ref_source": "HiGHS",
+  "highs_time": 0.005141600000115432,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -30.812149845708575,
+   "time": 0.00235,
+   "wall": 0.03526220000003377,
+   "iterations": 14,
+   "method": "ipm",
+   "kkt": [
+    1.7763568394002505e-15,
+    7.075589059271055e-13,
+    7.589070817716394e-12
+   ],
+   "viol": 1.7763568394002505e-15,
+   "relerr": 3.88338357760523e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -30.812149845824354,
+   "time": 0.166976,
+   "wall": 0.24043879999953788,
+   "iterations": 1491,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    6.0893512454640586e-12,
+    8.073541835074138e-13,
+    1.1949533919398114e-14
+   ],
+   "viol": 6.0893512454640586e-12,
+   "relerr": 1.2579487776625017e-13,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -30.812149845824354,
+   "time": 0.0754898,
+   "wall": 0.11932119999983115,
+   "iterations": 1491,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    6.0893512454640586e-12,
+    8.073541835074138e-13,
+    1.1949533919398114e-14
+   ],
+   "viol": 6.0893512454640586e-12,
+   "relerr": 1.2579487776625017e-13,
+   "agree": true
+  }
+ },
+ {
+  "instance": "bnl1",
+  "reference": 1977.6295615228873,
+  "ref_source": "HiGHS",
+  "highs_time": 0.03266860000030647,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1977.6295615238732,
+   "time": 0.0354435,
+   "wall": 0.06880050000017945,
+   "iterations": 21,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 2.871090032385837e-10,
+   "relerr": 4.985222085589482e-13,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "TIME_LIMIT",
+   "objective": 2022.9841960081444,
+   "time": 5.1382234,
+   "wall": 5.246846099999857,
+   "iterations": 587763,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)",
+   "kkt": null,
+   "viol": 0.00651476603775103,
+   "relerr": 0.022933837240140875,
+   "agree": false
+  },
+  "pdhg-cpu": {
+   "status": "TIME_LIMIT",
+   "objective": 1985.1710630401728,
+   "time": 5.0172826,
+   "wall": 5.066709000000628,
+   "iterations": 147886,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": null,
+   "viol": 0.00800400925558098,
+   "relerr": 0.0038134045242922596,
+   "agree": false
+  }
+ },
+ {
+  "instance": "bnl2",
+  "reference": 1811.2365403585454,
+  "ref_source": "HiGHS",
+  "highs_time": 0.05410540000002584,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1811.2365403585472,
+   "time": 5.1574198,
+   "wall": 5.19517949999954,
+   "iterations": 1973,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 6.394884621840902e-13,
+   "relerr": 1.004280425562625e-15,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1811.236540358546,
+   "time": 5.0011598,
+   "wall": 5.103211000000556,
+   "iterations": 216600,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 3.979039320256561e-13,
+   "relerr": 3.7660515958598435e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "TIME_LIMIT",
+   "objective": 1800.4193760978526,
+   "time": 5.0171335,
+   "wall": 5.069157699999778,
+   "iterations": 105678,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": null,
+   "viol": 0.06118646905262465,
+   "relerr": 0.005972253772304919,
+   "agree": false
+  }
+ },
+ {
+  "instance": "boeing1",
+  "reference": -335.21356750712664,
+  "ref_source": "HiGHS",
+  "highs_time": 0.02289650000011534,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -335.21356750643446,
+   "time": 0.0152226,
+   "wall": 0.034486399999877904,
+   "iterations": 17,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 2.4868995751603507e-14,
+   "relerr": 2.0648994508652858e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -335.21356750712704,
+   "time": 0.2931648,
+   "wall": 0.36773040000025503,
+   "iterations": 5737,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 1.8189894035458565e-12,
+   "relerr": 1.1870161908562864e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -335.21356750712704,
+   "time": 0.218905,
+   "wall": 0.26228769999943324,
+   "iterations": 5737,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 1.8189894035458565e-12,
+   "relerr": 1.1870161908562864e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "boeing2",
+  "reference": -315.0187280152028,
+  "ref_source": "HiGHS",
+  "highs_time": 0.008546500000193191,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -315.01872801459666,
+   "time": 0.0020937,
+   "wall": 0.036525800000163144,
+   "iterations": 12,
+   "method": "ipm",
+   "kkt": [
+    4.446881021810902e-15,
+    1.2619733236336828e-12,
+    2.384500362944173e-09
+   ],
+   "viol": 1.4210854715202004e-14,
+   "relerr": 1.924080447952112e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -315.01872801520346,
+   "time": 0.241085,
+   "wall": 0.34291529999973136,
+   "iterations": 3881,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    2.3874235921539366e-12,
+    1.5478441229879128e-15,
+    1.6188621888341372e-15
+   ],
+   "viol": 2.3874235921539366e-12,
+   "relerr": 2.1653348377966183e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -315.01872801520346,
+   "time": 0.4085272,
+   "wall": 0.4528970000001209,
+   "iterations": 3881,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    2.3874235921539366e-12,
+    1.5478441229879128e-15,
+    1.6188621888341372e-15
+   ],
+   "viol": 2.3874235921539366e-12,
+   "relerr": 2.1653348377966183e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "bore3d",
+  "reference": 1373.0803942084926,
+  "ref_source": "HiGHS",
+  "highs_time": 0.0074605999998311745,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1373.080394456227,
+   "time": 0.0029443,
+   "wall": 0.03425260000039998,
+   "iterations": 13,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 1.235861561344984e-11,
+   "relerr": 1.804222877284274e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1373.080394208493,
+   "time": 0.9386601,
+   "wall": 1.0018612000003486,
+   "iterations": 91312,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 8.185452315956354e-12,
+   "relerr": 3.3118770962322394e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1373.080394208493,
+   "time": 2.9833702,
+   "wall": 3.0205315000002884,
+   "iterations": 91312,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 8.185452315956354e-12,
+   "relerr": 3.3118770962322394e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "brandy",
+  "reference": 1518.5098964881279,
+  "ref_source": "HiGHS",
+  "highs_time": 0.009289600000101927,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1518.5098970309969,
+   "time": 0.0074836,
+   "wall": 0.036649900000156777,
+   "iterations": 14,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 7.275957614183426e-12,
+   "relerr": 3.575011107387365e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1518.5098964881286,
+   "time": 0.2741208,
+   "wall": 0.3533735999999408,
+   "iterations": 7858,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 6.821210263296962e-13,
+   "relerr": 4.492042020320341e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1518.5098964881286,
+   "time": 0.2390901,
+   "wall": 0.2759589000006599,
+   "iterations": 7858,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 6.821210263296962e-13,
+   "relerr": 4.492042020320341e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "capri",
+  "reference": 2690.012913768159,
+  "ref_source": "HiGHS",
+  "highs_time": 0.009726100000079896,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 2690.0129137684335,
+   "time": 0.0117845,
+   "wall": 0.04191569999966305,
+   "iterations": 19,
+   "method": "ipm",
+   "kkt": [
+    6.502228479115395e-13,
+    1.0018395992480151e-14,
+    1.2471272182943147e-12
+   ],
+   "viol": 6.502228479115395e-13,
+   "relerr": 1.0210634994709798e-13,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 2690.012913768161,
+   "time": 0.692477,
+   "wall": 0.7702707999997074,
+   "iterations": 57239,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.1620588192869585e-12,
+    3.1530333899354446e-14,
+    1.689874279531763e-15
+   ],
+   "viol": 2.3241408797503027e-12,
+   "relerr": 8.452512412839237e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 2690.012913768161,
+   "time": 1.6752472,
+   "wall": 1.7181946999999127,
+   "iterations": 57239,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.1620588192869585e-12,
+    3.1530333899354446e-14,
+    1.689874279531763e-15
+   ],
+   "viol": 2.3241408797503027e-12,
+   "relerr": 8.452512412839237e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "cycle",
+  "reference": -5.226393024894103,
+  "ref_source": "HiGHS",
+  "highs_time": 0.21904749999976048,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -5.226393024894099,
+   "time": 1.0054209,
+   "wall": 1.0460025999991558,
+   "iterations": 3954,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 3.403801815959895e-12,
+   "relerr": 6.797639714193683e-16,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -5.226393024894103,
+   "time": 1.822169,
+   "wall": 1.933157499999652,
+   "iterations": 85491,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 1.0912858282628414e-10,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -5.226393024894103,
+   "time": 4.0960697,
+   "wall": 4.162990499999978,
+   "iterations": 85491,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 1.0912858282628414e-10,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "czprob",
+  "reference": 2185196.6988565773,
+  "ref_source": "HiGHS",
+  "highs_time": 0.04231649999974252,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 2185196.699192259,
+   "time": 0.1144591,
+   "wall": 0.14984089999961725,
+   "iterations": 23,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 7.613980186084706e-12,
+   "relerr": 1.536162479187643e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 2185196.698856578,
+   "time": 0.2246838,
+   "wall": 0.3140461000002688,
+   "iterations": 1931,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 1.8189894035458565e-12,
+   "relerr": 4.261962207350949e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 2185196.698856578,
+   "time": 0.0922685,
+   "wall": 0.14991709999958402,
+   "iterations": 1931,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 1.8189894035458565e-12,
+   "relerr": 4.261962207350949e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "d2q06c",
+  "reference": 122784.21081418944,
+  "ref_source": "HiGHS",
+  "highs_time": 1.0536255999995774,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 122784.21081418936,
+   "time": 4.3004746,
+   "wall": 4.355670199999622,
+   "iterations": 5963,
+   "method": "ipm->dual-simplex",
+   "kkt": [
+    1.6655121726216748e-10,
+    1.0258460747536446e-12,
+    2.370304229943171e-16
+   ],
+   "viol": 1.6655121726216748e-10,
+   "relerr": 7.110970603731e-16,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 122784.21081418931,
+   "time": 4.672825,
+   "wall": 4.82695700000022,
+   "iterations": 43638,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    3.8198777474462986e-11,
+    5.07056618914703e-11,
+    4.740608459886344e-16
+   ],
+   "viol": 3.8198777474462986e-11,
+   "relerr": 1.06664559055965e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "FEASIBLE",
+   "objective": 122782.11447391346,
+   "time": 5.038119,
+   "wall": 5.122281500000099,
+   "iterations": 37581,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": [
+    0.2920229845558424,
+    0.015015038153766369,
+    9.020321290227456e-05
+   ],
+   "viol": 0.2920229845558424,
+   "relerr": 1.7073370118843516e-05,
+   "agree": false
+  }
+ },
+ {
+  "instance": "d6cube",
+  "reference": 315.4916666666669,
+  "ref_source": "HiGHS",
+  "highs_time": 0.14513039999974353,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 315.4916666666669,
+   "time": 0.9880871,
+   "wall": 1.0787701999997807,
+   "iterations": 420,
+   "method": "ipm->dual-simplex",
+   "kkt": [
+    1.7022101321077378e-13,
+    3.552713678800501e-15,
+    5.388143655675734e-16
+   ],
+   "viol": 1.8189894035458565e-12,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 315.4916666666667,
+   "time": 1.474597,
+   "wall": 1.6055668000008154,
+   "iterations": 13515,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    3.6970426720017713e-13,
+    4.4797499043625066e-13,
+    1.7960478852252459e-16
+   ],
+   "viol": 5.4569682106375694e-12,
+   "relerr": 7.206962955489534e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 315.4916666666667,
+   "time": 1.4191121,
+   "wall": 1.4974614000002475,
+   "iterations": 13515,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    3.6970426720017713e-13,
+    4.4797499043625066e-13,
+    1.7960478852252459e-16
+   ],
+   "viol": 5.4569682106375694e-12,
+   "relerr": 7.206962955489534e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "degen2",
+  "reference": -1435.178,
+  "ref_source": "HiGHS",
+  "highs_time": 0.015466700000160927,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -1435.1779999847306,
+   "time": 0.0307651,
+   "wall": 0.06600440000056551,
+   "iterations": 10,
+   "method": "ipm",
+   "kkt": [
+    3.7207044026947935e-13,
+    0,
+    1.9968090438133704e-11
+   ],
+   "viol": 3.8324898810060404e-13,
+   "relerr": 1.0639451376808794e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -1435.178,
+   "time": 0.2116935,
+   "wall": 0.28985519999969256,
+   "iterations": 2486,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    3.064215547965432e-14,
+    9.178121921619245e-14,
+    1.5831858964782363e-16
+   ],
+   "viol": 3.907985046680551e-14,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -1435.178,
+   "time": 0.0954232,
+   "wall": 0.13497860000006767,
+   "iterations": 2486,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    3.064215547965432e-14,
+    9.178121921619245e-14,
+    1.5831858964782363e-16
+   ],
+   "viol": 3.907985046680551e-14,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "degen3",
+  "reference": -987.2940000000001,
+  "ref_source": "HiGHS",
+  "highs_time": 0.217648399999689,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -987.2939999999995,
+   "time": 0.6438387,
+   "wall": 0.6847864999999729,
+   "iterations": 2272,
+   "method": "ipm->dual-simplex",
+   "kkt": [
+    2.859934511434403e-13,
+    1.5398513463393454e-13,
+    1.2653676081588848e-15
+   ],
+   "viol": 2.859934511434403e-13,
+   "relerr": 5.757496638367904e-16,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -987.2940000000001,
+   "time": 0.497252,
+   "wall": 0.5832329000004393,
+   "iterations": 6148,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    6.838973831690964e-14,
+    2.986117100715938e-14,
+    2.3006683784706984e-16
+   ],
+   "viol": 6.838973831690964e-14,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -987.2940000000001,
+   "time": 0.4077875,
+   "wall": 0.45721559999947203,
+   "iterations": 6148,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    6.838973831690964e-14,
+    2.986117100715938e-14,
+    2.3006683784706984e-16
+   ],
+   "viol": 6.838973831690964e-14,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "dfl001",
+  "reference": 11266396.046671394,
+  "ref_source": "HiGHS",
+  "highs_time": 8.191689900000256,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 11.4137554,
+   "wall": 11.47228610000002,
+   "iterations": 7812,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.0,
+   "agree": false
+  },
+  "pdhg-gpu": {
+   "status": "FEASIBLE",
+   "objective": 11266680.943814099,
+   "time": 5.0665803,
+   "wall": 5.210556300000462,
+   "iterations": 7434,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)",
+   "kkt": [
+    0.0009127550593004408,
+    1.6364603496622294,
+    3.736819200473436e-05
+   ],
+   "viol": 0.007425399343873096,
+   "relerr": 2.5287336032248556e-05,
+   "agree": false
+  },
+  "pdhg-cpu": {
+   "status": "FEASIBLE",
+   "objective": 11266680.943813931,
+   "time": 5.0354597,
+   "wall": 5.145176899999569,
+   "iterations": 7434,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": [
+    0.0009127550589789202,
+    1.6364603491383605,
+    3.736819191645227e-05
+   ],
+   "viol": 0.007425399348896633,
+   "relerr": 2.528733601736908e-05,
+   "agree": false
+  }
+ },
+ {
+  "instance": "e226",
+  "reference": -11.638929066370551,
+  "ref_source": "HiGHS",
+  "highs_time": 0.00870359999998982,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -11.638929066351817,
+   "time": 0.0280495,
+   "wall": 0.06450289999975212,
+   "iterations": 15,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 4.440892098500626e-14,
+   "relerr": 1.6095517999541197e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -11.638929066371226,
+   "time": 0.333532,
+   "wall": 0.40846349999992526,
+   "iterations": 13374,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 1.092281820547214e-11,
+   "relerr": 5.799636677247918e-14,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -11.638929066371226,
+   "time": 0.4881331,
+   "wall": 0.5238134999999602,
+   "iterations": 13374,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 1.092281820547214e-11,
+   "relerr": 5.799636677247918e-14,
+   "agree": true
+  }
+ },
+ {
+  "instance": "etamacro",
+  "reference": -755.7152333005279,
+  "ref_source": "HiGHS",
+  "highs_time": 0.017786799999612413,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -755.7152333053272,
+   "time": 0.0242397,
+   "wall": 0.05796009999994567,
+   "iterations": 572,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 2.4634190390888462e-12,
+   "relerr": 6.350659141086111e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -755.7152332121311,
+   "time": 0.1964796,
+   "wall": 0.274409900000137,
+   "iterations": 3918,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 2.9558577807620168e-12,
+   "relerr": 1.1697097269963146e-10,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -755.7152332121311,
+   "time": 0.2051156,
+   "wall": 0.2446257000001424,
+   "iterations": 3918,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 2.9558577807620168e-12,
+   "relerr": 1.1697097269963146e-10,
+   "agree": true
+  }
+ },
+ {
+  "instance": "fffff800",
+  "reference": 555679.5648174963,
+  "ref_source": "HiGHS",
+  "highs_time": 0.015940299999783747,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 555679.5651596467,
+   "time": 0.0792944,
+   "wall": 0.1152007999999114,
+   "iterations": 24,
+   "method": "ipm",
+   "kkt": [
+    2.9103830456733704e-11,
+    2.3641089086368083e-12,
+    1.1416902352894916e-09
+   ],
+   "viol": 5.820766091346741e-11,
+   "relerr": 6.15733161453408e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 555679.5648174969,
+   "time": 1.627698,
+   "wall": 1.779070700000375,
+   "iterations": 122692,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.5080199871363052e-09,
+    5.820766091346741e-11,
+    2.095004381972029e-16
+   ],
+   "viol": 1.5080199871363052e-09,
+   "relerr": 1.0475040760691773e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 555679.5648174969,
+   "time": 3.4647485,
+   "wall": 3.5067697000004046,
+   "iterations": 122692,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.5080199871363052e-09,
+    5.820766091346741e-11,
+    2.095004381972029e-16
+   ],
+   "viol": 1.5080199871363052e-09,
+   "relerr": 1.0475040760691773e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "finnis",
+  "reference": 172791.06559561158,
+  "ref_source": "HiGHS",
+  "highs_time": 0.011505599999964033,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 172791.0655956116,
+   "time": 0.4322523,
+   "wall": 0.4911234000001059,
+   "iterations": 449,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 5.933031843596837e-13,
+   "relerr": 1.6843365342075223e-16,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 172791.0655956116,
+   "time": 0.31048,
+   "wall": 0.3733636999995724,
+   "iterations": 4572,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 5.186961971048731e-13,
+   "relerr": 1.6843365342075223e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 172791.0655956116,
+   "time": 0.1536011,
+   "wall": 0.19570029999977123,
+   "iterations": 4569,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 5.186961971048731e-13,
+   "relerr": 1.6843365342075223e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "fit1d",
+  "reference": -9146.378092420926,
+  "ref_source": "HiGHS",
+  "highs_time": 0.016985899999781395,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -9146.378084547627,
+   "time": 0.0382486,
+   "wall": 0.07554540000000998,
+   "iterations": 13,
+   "method": "ipm",
+   "kkt": [
+    1.4373152379576105e-13,
+    0,
+    8.765589631337824e-10
+   ],
+   "viol": 1.4373152379576105e-13,
+   "relerr": 8.608105965919782e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "TIME_LIMIT",
+   "objective": -9144.768099464089,
+   "time": 5.1364931,
+   "wall": 5.212919800000236,
+   "iterations": 365647,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)",
+   "kkt": [
+    0.0003020668130773174,
+    0,
+    0.00042289777588565037
+   ],
+   "viol": 0.0003020668130773174,
+   "relerr": 0.0001760251916735587,
+   "agree": false
+  },
+  "pdhg-cpu": {
+   "status": "TIME_LIMIT",
+   "objective": -9132.74834013966,
+   "time": 5.0082548,
+   "wall": 5.048502699999517,
+   "iterations": 134381,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": [
+    0.040242526313647886,
+    0,
+    0.002208024185093875
+   ],
+   "viol": 0.040242526313647886,
+   "relerr": 0.0014901802815870686,
+   "agree": false
+  }
+ },
+ {
+  "instance": "fit1p",
+  "reference": 9146.378092420928,
+  "ref_source": "HiGHS",
+  "highs_time": 0.03813510000009046,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 9146.378095635515,
+   "time": 0.0261959,
+   "wall": 0.06131029999960447,
+   "iterations": 14,
+   "method": "ipm",
+   "kkt": [
+    3.383536836952858e-15,
+    0,
+    5.113185213411713e-10
+   ],
+   "viol": 4.263256414560601e-14,
+   "relerr": 3.514601258619862e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 9146.378092420935,
+   "time": 0.3312925,
+   "wall": 0.4087011999999959,
+   "iterations": 3849,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    2.7068294695622863e-15,
+    1.4551915228366852e-11,
+    5.965609112800249e-16
+   ],
+   "viol": 5.684341886080802e-14,
+   "relerr": 7.955015133490479e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 9146.378092420935,
+   "time": 0.1985492,
+   "wall": 0.2527144000005137,
+   "iterations": 3849,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    2.7068294695622863e-15,
+    1.4551915228366852e-11,
+    5.965609112800249e-16
+   ],
+   "viol": 5.684341886080802e-14,
+   "relerr": 7.955015133490479e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "fit2d",
+  "reference": -68464.29329383207,
+  "ref_source": "HiGHS",
+  "highs_time": 0.15580469999986235,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -68464.29329328453,
+   "time": 3.1181091,
+   "wall": 3.1969521000000896,
+   "iterations": 16,
+   "method": "ipm",
+   "kkt": [
+    2.2653767750568932e-11,
+    0,
+    8.03736678675219e-12
+   ],
+   "viol": 2.2653767750568932e-11,
+   "relerr": 7.99752524937094e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "TIME_LIMIT",
+   "objective": -68154.4814342124,
+   "time": 5.1951149,
+   "wall": 5.362401800000043,
+   "iterations": 81612,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)",
+   "kkt": [
+    0.009206405733444,
+    0,
+    0.004761554120042091
+   ],
+   "viol": 0.009206405733444,
+   "relerr": 0.004525159681266784,
+   "agree": false
+  },
+  "pdhg-cpu": {
+   "status": "TIME_LIMIT",
+   "objective": -67205.55803837819,
+   "time": 5.1268215,
+   "wall": 5.236465099999805,
+   "iterations": 37130,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": [
+    0.07245153674989524,
+    0,
+    0.019742737339742862
+   ],
+   "viol": 0.07245153674989524,
+   "relerr": 0.018385280777699638,
+   "agree": false
+  }
+ },
+ {
+  "instance": "fit2p",
+  "reference": 68464.29329383206,
+  "ref_source": "HiGHS",
+  "highs_time": 1.1524112000001878,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 68464.29330754947,
+   "time": 0.4270829,
+   "wall": 0.48791540000001987,
+   "iterations": 17,
+   "method": "ipm",
+   "kkt": [
+    1.873858794017759e-14,
+    0,
+    2.0995412920978028e-10
+   ],
+   "viol": 2.2737367544323206e-13,
+   "relerr": 2.003585502138163e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 68464.29329383215,
+   "time": 1.7400514,
+   "wall": 1.896389100000306,
+   "iterations": 11570,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    4.263256414560601e-14,
+    2.580691216280684e-11,
+    9.139409541916695e-15
+   ],
+   "viol": 2.2737367544323206e-13,
+   "relerr": 1.2752850744472228e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 68464.29329383215,
+   "time": 1.0328608,
+   "wall": 1.1353047000002334,
+   "iterations": 11570,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    4.263256414560601e-14,
+    2.580691216280684e-11,
+    9.139409541916695e-15
+   ],
+   "viol": 2.2737367544323206e-13,
+   "relerr": 1.2752850744472228e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "forplan",
+  "reference": null,
+  "ref_source": "HiGHS:ERROR",
+  "highs_time": null,
+  "default": {
+   "status": "CRASH",
+   "wall": 0.0363444000004165,
+   "err": "error: MPS line 166: bad number 'OB1PNW20'\n",
+   "relerr": null,
+   "agree": false
+  },
+  "pdhg-gpu": {
+   "status": "CRASH",
+   "wall": 0.043447899999591755,
+   "err": "error: MPS line 166: bad number 'OB1PNW20'\n",
+   "relerr": null,
+   "agree": false
+  },
+  "pdhg-cpu": {
+   "status": "CRASH",
+   "wall": 0.036791900000025635,
+   "err": "error: MPS line 166: bad number 'OB1PNW20'\n",
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "ganges",
+  "reference": -109585.73612927827,
+  "ref_source": "HiGHS",
+  "highs_time": 0.015847799999846757,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -109585.73612927797,
+   "time": 0.0482111,
+   "wall": 0.09356469999966066,
+   "iterations": 1317,
+   "method": "ipm->dual-simplex",
+   "kkt": [
+    1.1652900866465643e-11,
+    5.684341886080802e-14,
+    1.3544479977416392e-14
+   ],
+   "viol": 1.1652900866465643e-11,
+   "relerr": 2.7885948535783813e-15,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -109585.73612927781,
+   "time": 0.3029069,
+   "wall": 0.3875785000000178,
+   "iterations": 1655,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.1652900866465643e-11,
+    8.526512829121202e-14,
+    7.170607046867511e-15
+   ],
+   "viol": 1.4551915228366852e-11,
+   "relerr": 4.249287395928962e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -109585.73612927781,
+   "time": 0.082646,
+   "wall": 0.11960560000079568,
+   "iterations": 1655,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.1652900866465643e-11,
+    8.526512829121202e-14,
+    7.170607046867511e-15
+   ],
+   "viol": 1.4551915228366852e-11,
+   "relerr": 4.249287395928962e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "gfrd-pnc",
+  "reference": 6902235.999548809,
+  "ref_source": "HiGHS",
+  "highs_time": 0.013906299999689509,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 6902235.999566409,
+   "time": 0.0226554,
+   "wall": 0.049302999999781605,
+   "iterations": 12,
+   "method": "ipm",
+   "kkt": [
+    3.751665644813329e-12,
+    7.486846698157023e-11,
+    8.412244598099063e-12
+   ],
+   "viol": 3.751665644813329e-12,
+   "relerr": 2.5499177391549368e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 6902235.999548812,
+   "time": 0.503278,
+   "wall": 0.5854819000005591,
+   "iterations": 38681,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    2.546585164964199e-11,
+    2.969512186346804e-14,
+    6.746527065619143e-16
+   ],
+   "viol": 2.546585164964199e-11,
+   "relerr": 5.397222434447955e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 6902235.999548812,
+   "time": 1.0970473,
+   "wall": 1.1401906000000963,
+   "iterations": 38681,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    2.546585164964199e-11,
+    2.969512186346804e-14,
+    6.746527065619143e-16
+   ],
+   "viol": 2.546585164964199e-11,
+   "relerr": 5.397222434447955e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "greenbea",
+  "reference": -72555248.12984605,
+  "ref_source": "HiGHS",
+  "highs_time": 0.22932789999958914,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -72555248.12984602,
+   "time": 2.0443113,
+   "wall": 2.0862170999998852,
+   "iterations": 6174,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 1.55261528078654e-08,
+   "relerr": 4.1075350379011306e-16,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "TIME_LIMIT",
+   "objective": -72846758.47585495,
+   "time": 5.2331864,
+   "wall": 5.344409999999698,
+   "iterations": 333780,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)",
+   "kkt": null,
+   "viol": 3.7670171915938226,
+   "relerr": 0.004017770644064302,
+   "agree": false
+  },
+  "pdhg-cpu": {
+   "status": "TIME_LIMIT",
+   "objective": -67784889.79805498,
+   "time": 5.0223155,
+   "wall": 5.0905906000007235,
+   "iterations": 62671,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": null,
+   "viol": 124.54993252909526,
+   "relerr": 0.06574794318467442,
+   "agree": false
+  }
+ },
+ {
+  "instance": "greenbeb",
+  "reference": -4302260.261206587,
+  "ref_source": "HiGHS",
+  "highs_time": 0.6922881000000416,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -4302260.261206586,
+   "time": 2.4783977,
+   "wall": 2.526048499999888,
+   "iterations": 8395,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 1.099351720768027e-10,
+   "relerr": 2.1647285800285016e-16,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -4309422.033881603,
+   "time": 5.019734,
+   "wall": 5.124354100000346,
+   "iterations": 15817,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)",
+   "kkt": null,
+   "viol": 0.6322868298587707,
+   "relerr": 0.0016646535170346515,
+   "agree": false
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -4309422.033881602,
+   "time": 5.0119166,
+   "wall": 5.0678171999998085,
+   "iterations": 15817,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": null,
+   "viol": 0.6322868298438493,
+   "relerr": 0.0016646535170344351,
+   "agree": false
+  }
+ },
+ {
+  "instance": "grow15",
+  "reference": -106870941.29357538,
+  "ref_source": "HiGHS",
+  "highs_time": 0.06789220000018759,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -106870941.27236505,
+   "time": 0.0345687,
+   "wall": 0.06840250000004744,
+   "iterations": 9,
+   "method": "ipm",
+   "kkt": [
+    4.94765117764473e-10,
+    2.3524879266823007e-10,
+    4.930460329104245e-10
+   ],
+   "viol": 4.94765117764473e-10,
+   "relerr": 1.984667439787865e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -106870941.29357535,
+   "time": 0.5301475,
+   "wall": 0.6171155000001818,
+   "iterations": 18785,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.4260876923799515e-09,
+    9.159339953157541e-16,
+    1.3943136341882385e-16
+   ],
+   "viol": 1.4260876923799515e-09,
+   "relerr": 2.788627294469886e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -106870941.29357535,
+   "time": 2.9495832,
+   "wall": 2.9948931999997512,
+   "iterations": 18785,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.4260876923799515e-09,
+    9.159339953157541e-16,
+    1.3943136341882385e-16
+   ],
+   "viol": 1.4260876923799515e-09,
+   "relerr": 2.788627294469886e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "grow22",
+  "reference": -160834336.48256287,
+  "ref_source": "HiGHS",
+  "highs_time": 0.06932589999996708,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -160834336.4825316,
+   "time": 0.0341193,
+   "wall": 0.07357460000002902,
+   "iterations": 10,
+   "method": "ipm",
+   "kkt": [
+    4.874891601502895e-10,
+    0,
+    1.1232780334226255e-12
+   ],
+   "viol": 4.874891601502895e-10,
+   "relerr": 1.9437787271303088e-13,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -160834336.48256296,
+   "time": 0.512527,
+   "wall": 0.5972773999992569,
+   "iterations": 8264,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.8131686374545097e-08,
+    4.218847493575595e-15,
+    0
+   ],
+   "viol": 1.8131686374545097e-08,
+   "relerr": 5.558947742031388e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -160834336.48256296,
+   "time": 0.6955186,
+   "wall": 0.7448209999993196,
+   "iterations": 8264,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.8131686374545097e-08,
+    4.218847493575595e-15,
+    0
+   ],
+   "viol": 1.8131686374545097e-08,
+   "relerr": 5.558947742031388e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "grow7",
+  "reference": -47787811.81471151,
+  "ref_source": "HiGHS",
+  "highs_time": 0.02177879999999277,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -47787811.81460481,
+   "time": 0.0171892,
+   "wall": 0.0649370999999519,
+   "iterations": 9,
+   "method": "ipm",
+   "kkt": [
+    3.7471181713044643e-10,
+    0,
+    8.443130536463947e-12
+   ],
+   "viol": 3.7471181713044643e-10,
+   "relerr": 2.2327819725718966e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -47787811.81471152,
+   "time": 0.2310635,
+   "wall": 0.30634620000000723,
+   "iterations": 5857,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.7062120605260134e-09,
+    1.1379786002407855e-15,
+    7.795481900178282e-16
+   ],
+   "viol": 1.7062120605260134e-09,
+   "relerr": 1.5590964126610548e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -47787811.81471152,
+   "time": 0.4310266,
+   "wall": 0.4738549999992756,
+   "iterations": 5857,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.7062120605260134e-09,
+    1.1379786002407855e-15,
+    7.795481900178282e-16
+   ],
+   "viol": 1.7062120605260134e-09,
+   "relerr": 1.5590964126610548e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "israel",
+  "reference": -896644.8218630457,
+  "ref_source": "HiGHS",
+  "highs_time": 0.010076999999910186,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -896644.8218611965,
+   "time": 0.0124162,
+   "wall": 0.04318340000008902,
+   "iterations": 14,
+   "method": "ipm",
+   "kkt": [
+    0,
+    1.0094325375575864e-11,
+    2.2007421692985332e-11
+   ],
+   "viol": 0,
+   "relerr": 2.062289244092096e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -896644.8218630459,
+   "time": 0.182389,
+   "wall": 0.25088489999961894,
+   "iterations": 1713,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    2.502842377793968e-10,
+    1.7053025658242404e-13,
+    0
+   ],
+   "viol": 5.255968993367333e-10,
+   "relerr": 2.5966875397785144e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -896644.8218630459,
+   "time": 0.0969916,
+   "wall": 0.1262680999998338,
+   "iterations": 1713,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    2.502842377793968e-10,
+    1.7053025658242404e-13,
+    0
+   ],
+   "viol": 5.255968993367333e-10,
+   "relerr": 2.5966875397785144e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "kb2",
+  "reference": -1749.9001299062056,
+  "ref_source": "HiGHS",
+  "highs_time": 0.00230520000013712,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -1749.9001298034707,
+   "time": 0.0026698,
+   "wall": 0.038403399999879184,
+   "iterations": 10,
+   "method": "ipm",
+   "kkt": [
+    2.2737367544323206e-13,
+    0,
+    1.2077944858122617e-10
+   ],
+   "viol": 2.2737367544323206e-13,
+   "relerr": 5.870902466990985e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -1749.9001299062058,
+   "time": 0.2942223,
+   "wall": 0.3612748000005013,
+   "iterations": 12555,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    4.547473508864641e-13,
+    2.220446049250313e-15,
+    1.2986101923209764e-16
+   ],
+   "viol": 4.547473508864641e-13,
+   "relerr": 1.2993522976389474e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -1749.9001299062058,
+   "time": 0.4398556,
+   "wall": 0.4765631000000212,
+   "iterations": 12555,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    4.547473508864641e-13,
+    2.220446049250313e-15,
+    1.2986101923209764e-16
+   ],
+   "viol": 4.547473508864641e-13,
+   "relerr": 1.2993522976389474e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "lotfi",
+  "reference": -25.264706061880002,
+  "ref_source": "HiGHS",
+  "highs_time": 0.006552100000135397,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -25.264706055085373,
+   "time": 0.0052456,
+   "wall": 0.0411815999996179,
+   "iterations": 10,
+   "method": "ipm",
+   "kkt": [
+    2.7939677238464355e-09,
+    6.680585377387756e-12,
+    4.735032412139912e-10
+   ],
+   "viol": 2.7939677238464355e-09,
+   "relerr": 2.689375780945291e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -25.264706061786423,
+   "time": 0.7187403,
+   "wall": 0.7920549999998912,
+   "iterations": 64469,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    3.8673169910907745e-07,
+    1.0269562977782698e-14,
+    3.8032655028327184e-12
+   ],
+   "viol": 3.8673169910907745e-07,
+   "relerr": 3.7039211170874715e-12,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -25.264706061786423,
+   "time": 1.7104187,
+   "wall": 1.7508570999998483,
+   "iterations": 64469,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    3.8673169910907745e-07,
+    1.0269562977782698e-14,
+    3.8032655028327184e-12
+   ],
+   "viol": 3.8673169910907745e-07,
+   "relerr": 3.7039211170874715e-12,
+   "agree": true
+  }
+ },
+ {
+  "instance": "maros-r7",
+  "reference": 1497185.166479644,
+  "ref_source": "HiGHS",
+  "highs_time": 0.8057019000002583,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 10.6080958,
+   "wall": 10.697431900000083,
+   "iterations": 2377,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.0,
+   "agree": false
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1497185.1664795016,
+   "time": 0.3432658,
+   "wall": 0.5000591000007262,
+   "iterations": 1744,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    5.223682819632813e-09,
+    1.2352491165351642e-09,
+    1.198998696863736e-13
+   ],
+   "viol": 8.849809773892048e-08,
+   "relerr": 9.501798872814877e-14,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1497185.1664795016,
+   "time": 0.3211616,
+   "wall": 0.4460645999997723,
+   "iterations": 1744,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    5.223682819632813e-09,
+    1.2352491165351642e-09,
+    1.198998696863736e-13
+   ],
+   "viol": 8.849809773892048e-08,
+   "relerr": 9.501798872814877e-14,
+   "agree": true
+  }
+ },
+ {
+  "instance": "maros",
+  "reference": -58063.7437011259,
+  "ref_source": "HiGHS",
+  "highs_time": 0.07068300000037198,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -58063.743602829825,
+   "time": 0.1787309,
+   "wall": 0.21410560000003898,
+   "iterations": 17,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 1.1557096749723294e-08,
+   "relerr": 1.6928994080346206e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -58063.74370112592,
+   "time": 1.6594757,
+   "wall": 1.7430292999997619,
+   "iterations": 108210,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 2.0023435354232788e-08,
+   "relerr": 2.5061965179631845e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "TIME_LIMIT",
+   "objective": -58063.6263988777,
+   "time": 5.0224047,
+   "wall": 5.067863599999328,
+   "iterations": 70644,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": null,
+   "viol": 0.00011665972124319524,
+   "relerr": 2.0202322607250707e-06,
+   "agree": false
+  }
+ },
+ {
+  "instance": "modszk1",
+  "reference": 320.619729064346,
+  "ref_source": "HiGHS",
+  "highs_time": 0.022553000000243628,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 320.61972923733373,
+   "time": 0.0844924,
+   "wall": 0.11599960000057763,
+   "iterations": 41,
+   "method": "ipm",
+   "kkt": [
+    5.820766091346741e-11,
+    5.237423763575844e-18,
+    1.4603809823768492e-09
+   ],
+   "viol": 5.820766091346741e-11,
+   "relerr": 5.395416924948406e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 320.6197290419398,
+   "time": 0.884021,
+   "wall": 0.961136400000214,
+   "iterations": 48234,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    2.6193447411060333e-09,
+    8.526512829121202e-14,
+    4.778919786723802e-11
+   ],
+   "viol": 2.6193447411060333e-09,
+   "relerr": 6.988402694814635e-11,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 320.6197290419398,
+   "time": 4.8581339,
+   "wall": 4.937603299999864,
+   "iterations": 48298,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    2.6193447411060333e-09,
+    8.526512829121202e-14,
+    4.778919786723802e-11
+   ],
+   "viol": 2.6193447411060333e-09,
+   "relerr": 6.988402694814635e-11,
+   "agree": true
+  }
+ },
+ {
+  "instance": "nesm",
+  "reference": 14076036.487562705,
+  "ref_source": "HiGHS",
+  "highs_time": 0.18080809999992198,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 14076036.501740925,
+   "time": 0.2040972,
+   "wall": 0.24219709999943007,
+   "iterations": 21,
+   "method": "ipm",
+   "kkt": [
+    3.1997130546860816e-12,
+    2.7374833781734775e-08,
+    1.272579038722977e-09
+   ],
+   "viol": 3.1997130546860816e-12,
+   "relerr": 1.0072594082279357e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 14076036.487562727,
+   "time": 1.0525216,
+   "wall": 1.1540704999997615,
+   "iterations": 11703,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    7.02016222930979e-12,
+    8.470310675079418e-09,
+    5.557749923359003e-15
+   ],
+   "viol": 7.02016222930979e-12,
+   "relerr": 1.5879286623419186e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 14076036.487562727,
+   "time": 0.9351586,
+   "wall": 0.9842761999998402,
+   "iterations": 11703,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    7.02016222930979e-12,
+    8.470310675079418e-09,
+    5.557749923359003e-15
+   ],
+   "viol": 7.02016222930979e-12,
+   "relerr": 1.5879286623419186e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "perold",
+  "reference": -9380.755278235161,
+  "ref_source": "HiGHS",
+  "highs_time": 0.05836920000001555,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -9380.755278235154,
+   "time": 0.1922237,
+   "wall": 0.2340516000003845,
+   "iterations": 1252,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 1.8153514247387648e-09,
+   "relerr": 7.756259915515332e-16,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "TIME_LIMIT",
+   "objective": -9379.888712761614,
+   "time": 5.1902896,
+   "wall": 5.274842899999385,
+   "iterations": 579863,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)",
+   "kkt": null,
+   "viol": 0.01791463099783641,
+   "relerr": 9.237694064543394e-05,
+   "agree": false
+  },
+  "pdhg-cpu": {
+   "status": "TIME_LIMIT",
+   "objective": -10028.909760881801,
+   "time": 5.0524616,
+   "wall": 5.0955023000005895,
+   "iterations": 62159,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": null,
+   "viol": 32.37005103406525,
+   "relerr": 0.06909406155711799,
+   "agree": false
+  }
+ },
+ {
+  "instance": "pilot",
+  "reference": -557.4897292743999,
+  "ref_source": "HiGHS",
+  "highs_time": 1.5775668000001133,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -557.4897292840676,
+   "time": 6.8029038,
+   "wall": 6.866850200000044,
+   "iterations": 9495,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 5.4001247917767614e-12,
+   "relerr": 1.7341487741404258e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "TIME_LIMIT",
+   "objective": -558.8677898081543,
+   "time": 5.2358546,
+   "wall": 5.363879300000008,
+   "iterations": 270224,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)",
+   "kkt": null,
+   "viol": 0.016708136745124946,
+   "relerr": 0.0024719029990883917,
+   "agree": false
+  },
+  "pdhg-cpu": {
+   "status": "TIME_LIMIT",
+   "objective": -558.9229287503186,
+   "time": 5.1518174,
+   "wall": 5.2093918999999005,
+   "iterations": 47884,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": null,
+   "viol": 0.030479425410343597,
+   "relerr": 0.002570808753345322,
+   "agree": false
+  }
+ },
+ {
+  "instance": "pilot4",
+  "reference": -2581.139258883888,
+  "ref_source": "HiGHS",
+  "highs_time": 0.029077199999846925,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -2581.1392588839044,
+   "time": 0.0349437,
+   "wall": 0.07254340000054071,
+   "iterations": 25,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 1.1641532182693481e-10,
+   "relerr": 6.342511189803707e-15,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -2581.1392588838844,
+   "time": 3.4093566,
+   "wall": 3.479773099999875,
+   "iterations": 346926,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 6.257323548197746e-10,
+   "relerr": 1.4094469310674905e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "TIME_LIMIT",
+   "objective": -2516.3337178577717,
+   "time": 5.0336926,
+   "wall": 5.067203800000243,
+   "iterations": 128014,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": null,
+   "viol": 10.812736437196293,
+   "relerr": 0.025107340025558682,
+   "agree": false
+  }
+ },
+ {
+  "instance": "pilot87",
+  "reference": 301.7103473331115,
+  "ref_source": "HiGHS",
+  "highs_time": 5.64288949999991,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 10.2238852,
+   "wall": 10.279080899999826,
+   "iterations": 8091,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.0,
+   "agree": false
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 301.71249571263724,
+   "time": 1.7643476,
+   "wall": 1.9121406000003844,
+   "iterations": 43691,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)",
+   "kkt": null,
+   "viol": 0.4121221529465682,
+   "relerr": 7.120669028223803e-06,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 301.7124957169937,
+   "time": 3.8934773,
+   "wall": 3.9957954000001337,
+   "iterations": 43691,
+   "method": "pdhg-cpu(12 threads)",
+   "kkt": null,
+   "viol": 0.4121221529552608,
+   "relerr": 7.120683467501939e-06,
+   "agree": true
+  }
+ },
+ {
+  "instance": "pilotnov",
+  "reference": -4497.2761882188715,
+  "ref_source": "HiGHS",
+  "highs_time": 0.24487339999996038,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -4497.2761882188715,
+   "time": 0.2732171,
+   "wall": 0.32197830000040994,
+   "iterations": 1108,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 2.615934135974385e-10,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -4497.2761882188715,
+   "time": 0.7805181,
+   "wall": 0.8739974000000075,
+   "iterations": 18599,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 1.5903651728876866e-09,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -4497.2761882188715,
+   "time": 0.7925479,
+   "wall": 0.8361229000001913,
+   "iterations": 18599,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 1.5903651728876866e-09,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "recipe",
+  "reference": -266.616,
+  "ref_source": "HiGHS",
+  "highs_time": 0.004840399999920919,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -266.61600000000027,
+   "time": 0.001966,
+   "wall": 0.05002500000045984,
+   "iterations": 48,
+   "method": "ipm->dual-simplex",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.0660166468030429e-15,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -266.61600000000027,
+   "time": 0.5226918,
+   "wall": 0.5880147000007128,
+   "iterations": 41164,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.0660166468030429e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -266.61600000000027,
+   "time": 1.0685569,
+   "wall": 1.098260200000368,
+   "iterations": 41164,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.0660166468030429e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "sc105",
+  "reference": -52.20206121170723,
+  "ref_source": "HiGHS",
+  "highs_time": 0.0030842999999549647,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -52.20206120848646,
+   "time": 0.0029951,
+   "wall": 0.037173100000472914,
+   "iterations": 11,
+   "method": "ipm",
+   "kkt": [
+    1.1368683772161603e-13,
+    4.509656537088347e-13,
+    2.629081224291832e-10
+   ],
+   "viol": 1.1368683772161603e-13,
+   "relerr": 6.16981275102053e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -52.20206121170724,
+   "time": 0.2319226,
+   "wall": 0.3050954999998794,
+   "iterations": 3068,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    2.2737367544323206e-13,
+    1.3877787807814457e-17,
+    1.3355549006506228e-16
+   ],
+   "viol": 2.2737367544323206e-13,
+   "relerr": 1.3611392333311705e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -52.20206121170724,
+   "time": 0.1004668,
+   "wall": 0.14643120000073395,
+   "iterations": 3068,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    2.2737367544323206e-13,
+    1.3877787807814457e-17,
+    1.3355549006506228e-16
+   ],
+   "viol": 2.2737367544323206e-13,
+   "relerr": 1.3611392333311705e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "sc205",
+  "reference": -52.20206121170721,
+  "ref_source": "HiGHS",
+  "highs_time": 0.007570700000087527,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -52.202061179989876,
+   "time": 0.0112002,
+   "wall": 0.057396000000153435,
+   "iterations": 14,
+   "method": "ipm",
+   "kkt": [
+    2.2737367544323206e-13,
+    0,
+    7.704016229060841e-10
+   ],
+   "viol": 2.2737367544323206e-13,
+   "relerr": 6.075877810249881e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -52.20206121170724,
+   "time": 0.2580572,
+   "wall": 0.3353724999997212,
+   "iterations": 7199,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    5.115907697472721e-13,
+    6.938893903907228e-17,
+    0
+   ],
+   "viol": 9.094947017729282e-13,
+   "relerr": 5.444556933324684e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -52.20206121170724,
+   "time": 0.2157945,
+   "wall": 0.2541591999997763,
+   "iterations": 7199,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    5.115907697472721e-13,
+    6.938893903907228e-17,
+    0
+   ],
+   "viol": 9.094947017729282e-13,
+   "relerr": 5.444556933324684e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "sc50a",
+  "reference": -64.5750770585645,
+  "ref_source": "HiGHS",
+  "highs_time": 0.003038700000161043,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -64.57507676803507,
+   "time": 0.0009132,
+   "wall": 0.03670880000026955,
+   "iterations": 8,
+   "method": "ipm",
+   "kkt": [
+    2.842170943040401e-14,
+    0,
+    7.508930991863053e-09
+   ],
+   "viol": 2.842170943040401e-14,
+   "relerr": 4.4990953368488135e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -64.5750770585645,
+   "time": 0.1307395,
+   "wall": 0.1916785000003074,
+   "iterations": 488,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    5.684341886080802e-14,
+    1.6653345369377348e-16,
+    0
+   ],
+   "viol": 1.4210854715202004e-13,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -64.5750770585645,
+   "time": 0.0163444,
+   "wall": 0.05585569999948348,
+   "iterations": 488,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    5.684341886080802e-14,
+    1.6653345369377348e-16,
+    0
+   ],
+   "viol": 1.4210854715202004e-13,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "sc50b",
+  "reference": -69.99999999999999,
+  "ref_source": "HiGHS",
+  "highs_time": 0.00277090000008684,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -69.99999996509125,
+   "time": 0.0007703,
+   "wall": 0.032942499999990105,
+   "iterations": 7,
+   "method": "ipm",
+   "kkt": [
+    2.842170943040401e-14,
+    3.727636255224098e-12,
+    6.666968451636491e-10
+   ],
+   "viol": 2.842170943040401e-14,
+   "relerr": 4.986962462031183e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -70,
+   "time": 0.1324904,
+   "wall": 0.22556189999977505,
+   "iterations": 453,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    2.842170943040401e-14,
+    1.1102230246251565e-16,
+    0
+   ],
+   "viol": 1.1368683772161603e-13,
+   "relerr": 2.0301221021717152e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -70,
+   "time": 0.0351307,
+   "wall": 0.0722884000006161,
+   "iterations": 453,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    2.842170943040401e-14,
+    1.1102230246251565e-16,
+    0
+   ],
+   "viol": 1.1368683772161603e-13,
+   "relerr": 2.0301221021717152e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "scagr25",
+  "reference": -14753433.06076852,
+  "ref_source": "HiGHS",
+  "highs_time": 0.011372599999958766,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -14753433.053025912,
+   "time": 0.0225777,
+   "wall": 0.06041559999994206,
+   "iterations": 15,
+   "method": "ipm",
+   "kkt": [
+    5.4569682106375694e-12,
+    0.09523793923113846,
+    0.00039286836844656476
+   ],
+   "viol": 5.4569682106375694e-12,
+   "relerr": 5.248004267328195e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -14753433.06076853,
+   "time": 0.2377605,
+   "wall": 0.3344096000000718,
+   "iterations": 4765,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.4551915228366852e-11,
+    6.865256662478009e-14,
+    3.787549003626202e-16
+   ],
+   "viol": 1.4551915228366852e-11,
+   "relerr": 6.312582100582392e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -14753433.06076853,
+   "time": 0.1351082,
+   "wall": 0.1713726999996652,
+   "iterations": 4765,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.4551915228366852e-11,
+    6.865256662478009e-14,
+    3.787549003626202e-16
+   ],
+   "viol": 1.4551915228366852e-11,
+   "relerr": 6.312582100582392e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "scagr7",
+  "reference": -2331389.824330984,
+  "ref_source": "HiGHS",
+  "highs_time": 0.0034665000002860324,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -2331389.824327893,
+   "time": 0.0032454,
+   "wall": 0.03247579999970185,
+   "iterations": 18,
+   "method": "ipm",
+   "kkt": [
+    2.7284841053187847e-12,
+    1.9106273630491686e-10,
+    7.154542131433741e-11
+   ],
+   "viol": 2.7284841053187847e-12,
+   "relerr": 1.3258441779618661e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -2331389.824330984,
+   "time": 0.2563374,
+   "wall": 0.326489600000059,
+   "iterations": 12113,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.9099388737231493e-11,
+    2.7899345503709865e-13,
+    7.98941614504064e-16
+   ],
+   "viol": 1.9099388737231493e-11,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -2331389.824330984,
+   "time": 0.3262375,
+   "wall": 0.36415020000004006,
+   "iterations": 12113,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.9099388737231493e-11,
+    2.7899345503709865e-13,
+    7.98941614504064e-16
+   ],
+   "viol": 1.9099388737231493e-11,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "scfxm1",
+  "reference": 18416.759028348948,
+  "ref_source": "HiGHS",
+  "highs_time": 0.00857769999993252,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 18416.759035148254,
+   "time": 0.0169601,
+   "wall": 0.06522110000059911,
+   "iterations": 13,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 9.094947017729282e-13,
+   "relerr": 3.6919123405118565e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 18416.75902834894,
+   "time": 0.2329079,
+   "wall": 0.30458899999939604,
+   "iterations": 7886,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 1.1972645097557688e-11,
+   "relerr": 3.950726402503031e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 18416.75902834894,
+   "time": 0.2325402,
+   "wall": 0.2719420000003083,
+   "iterations": 7886,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 1.1972645097557688e-11,
+   "relerr": 3.950726402503031e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "scfxm2",
+  "reference": 36660.261564998815,
+  "ref_source": "HiGHS",
+  "highs_time": 0.021820100000240927,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 36660.26157881079,
+   "time": 0.0437306,
+   "wall": 0.07443459999922197,
+   "iterations": 15,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 1.2846612662542611e-11,
+   "relerr": 3.767559634671059e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 36660.26156499882,
+   "time": 0.4868697,
+   "wall": 0.5449683999995614,
+   "iterations": 33241,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 1.1596057447604835e-11,
+   "relerr": 1.984698772888764e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 36660.26156499882,
+   "time": 1.1683822,
+   "wall": 1.2176518999995096,
+   "iterations": 33241,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 1.1596057447604835e-11,
+   "relerr": 1.984698772888764e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "scfxm3",
+  "reference": 54901.25454975146,
+  "ref_source": "HiGHS",
+  "highs_time": 0.02979300000015428,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 54901.25455021679,
+   "time": 0.0955225,
+   "wall": 0.1326718999998775,
+   "iterations": 16,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 3.7476866054930724e-10,
+   "relerr": 8.475833075789115e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 54901.254549751444,
+   "time": 0.4216873,
+   "wall": 0.5081563999992795,
+   "iterations": 14108,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 7.275957614183426e-12,
+   "relerr": 2.650561512247397e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 54901.254549751444,
+   "time": 0.4785932,
+   "wall": 0.5255686999998943,
+   "iterations": 14108,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 7.275957614183426e-12,
+   "relerr": 2.650561512247397e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "scorpion",
+  "reference": 1878.124822738107,
+  "ref_source": "HiGHS",
+  "highs_time": 0.01006790000019464,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1878.1248249393375,
+   "time": 0.0036258,
+   "wall": 0.03374230000008538,
+   "iterations": 9,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 1.1747121280210328e-13,
+   "relerr": 1.1720363023346708e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1878.1248227381072,
+   "time": 0.2411518,
+   "wall": 0.3233622000007017,
+   "iterations": 12624,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 1.4432899320127035e-15,
+   "relerr": 1.2106419801839651e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1878.1248227381072,
+   "time": 0.5133893,
+   "wall": 0.5664429999997083,
+   "iterations": 12624,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 1.4432899320127035e-15,
+   "relerr": 1.2106419801839651e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "scrs8",
+  "reference": 904.2969538007914,
+  "ref_source": "HiGHS",
+  "highs_time": 0.013476000000082422,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 904.2969575058335,
+   "time": 0.0374003,
+   "wall": 0.0644745999998122,
+   "iterations": 15,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 4.2580529813160326e-14,
+   "relerr": 4.097152034690691e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 904.2969538007915,
+   "time": 0.7613784,
+   "wall": 0.8413442000000941,
+   "iterations": 63610,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 6.181721801112872e-13,
+   "relerr": 1.2571847913872354e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 904.2969538007915,
+   "time": 2.1663592,
+   "wall": 2.1984032000000298,
+   "iterations": 63610,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 6.181721801112872e-13,
+   "relerr": 1.2571847913872354e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "scsd1",
+  "reference": 8.666666674333364,
+  "ref_source": "HiGHS",
+  "highs_time": 0.008699699999851873,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 8.666666674377359,
+   "time": 0.0030472,
+   "wall": 0.034961199999997916,
+   "iterations": 8,
+   "method": "ipm",
+   "kkt": [
+    2.7755575615628914e-16,
+    0,
+    7.269954747341e-12
+   ],
+   "viol": 2.7755575615628914e-16,
+   "relerr": 5.076349592596981e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 8.666666674333367,
+   "time": 0.2001691,
+   "wall": 0.26215790000060224,
+   "iterations": 1687,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    0,
+    8.277649821191798e-16,
+    1.8376105220600787e-16
+   ],
+   "viol": 0,
+   "relerr": 4.099285010374273e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 8.666666674333367,
+   "time": 0.0718273,
+   "wall": 0.11130000000048312,
+   "iterations": 1687,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    0,
+    8.277649821191798e-16,
+    1.8376105220600787e-16
+   ],
+   "viol": 0,
+   "relerr": 4.099285010374273e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "scsd6",
+  "reference": 50.5000000782623,
+  "ref_source": "HiGHS",
+  "highs_time": 0.016768599999977596,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 50.500000085582236,
+   "time": 0.005542,
+   "wall": 0.04635429999962071,
+   "iterations": 8,
+   "method": "ipm",
+   "kkt": [
+    5.551115123125783e-16,
+    0,
+    1.921179242701886e-10
+   ],
+   "viol": 5.551115123125783e-16,
+   "relerr": 1.449491701535755e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 50.50000007714433,
+   "time": 0.2495878,
+   "wall": 0.3423668000004909,
+   "iterations": 3470,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    4.884981308350689e-15,
+    1.9539925233402755e-14,
+    4.1390838914315186e-16
+   ],
+   "viol": 4.884981308350689e-15,
+   "relerr": 2.213811968593503e-11,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 50.50000007714433,
+   "time": 0.1117064,
+   "wall": 0.1568397000000914,
+   "iterations": 3470,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    4.884981308350689e-15,
+    1.9539925233402755e-14,
+    4.1390838914315186e-16
+   ],
+   "viol": 4.884981308350689e-15,
+   "relerr": 2.213811968593503e-11,
+   "agree": true
+  }
+ },
+ {
+  "instance": "scsd8",
+  "reference": 904.9999999254644,
+  "ref_source": "HiGHS",
+  "highs_time": 0.06573079999998299,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 904.9999999733886,
+   "time": 0.0173154,
+   "wall": 0.05068600000049628,
+   "iterations": 8,
+   "method": "ipm",
+   "kkt": [
+    1.0658141036401503e-14,
+    0,
+    1.2732135287581672e-10
+   ],
+   "viol": 1.0658141036401503e-14,
+   "relerr": 5.295495215264462e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 904.9999999254643,
+   "time": 0.357694,
+   "wall": 0.448353999999199,
+   "iterations": 8198,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.0857981180834031e-13,
+    2.796925900693807e-13,
+    7.528929651057545e-16
+   ],
+   "viol": 1.0857981180834031e-13,
+   "relerr": 1.2562081517235276e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 904.9999999254643,
+   "time": 0.2873556,
+   "wall": 0.33251149999978225,
+   "iterations": 8198,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.0857981180834031e-13,
+    2.796925900693807e-13,
+    7.528929651057545e-16
+   ],
+   "viol": 1.0857981180834031e-13,
+   "relerr": 1.2562081517235276e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "sctap1",
+  "reference": 1412.25,
+  "ref_source": "HiGHS",
+  "highs_time": 0.021415000000160944,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1412.250000449748,
+   "time": 0.0035302,
+   "wall": 0.03726639999968029,
+   "iterations": 12,
+   "method": "ipm",
+   "kkt": [
+    1.1102230246251565e-16,
+    0,
+    5.834632947502649e-10
+   ],
+   "viol": 2.220446049250313e-16,
+   "relerr": 3.1846208949158704e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1412.249999999998,
+   "time": 0.1424157,
+   "wall": 0.205001600000287,
+   "iterations": 1155,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    3.694822225952521e-13,
+    8.526512829121202e-14,
+    1.1262096077145775e-15
+   ],
+   "viol": 4.050093593832571e-13,
+   "relerr": 1.4490090840779526e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1412.249999999998,
+   "time": 0.0989509,
+   "wall": 0.13681499999984226,
+   "iterations": 1155,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    3.694822225952521e-13,
+    8.526512829121202e-14,
+    1.1262096077145775e-15
+   ],
+   "viol": 4.050093593832571e-13,
+   "relerr": 1.4490090840779526e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "sctap2",
+  "reference": 1724.807142857143,
+  "ref_source": "HiGHS",
+  "highs_time": 0.02770620000001145,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1724.8071428652675,
+   "time": 0.0172784,
+   "wall": 0.043730000000323344,
+   "iterations": 11,
+   "method": "ipm",
+   "kkt": [
+    1.1102230246251565e-16,
+    0,
+    9.645225698792407e-12
+   ],
+   "viol": 2.220446049250313e-16,
+   "relerr": 4.710391074493875e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1724.8071428571432,
+   "time": 0.1508634,
+   "wall": 0.22852960000000166,
+   "iterations": 999,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.4210854715202004e-13,
+    2.960594732333751e-14,
+    3.9524753918935427e-16
+   ],
+   "viol": 1.4210854715202004e-13,
+   "relerr": 1.3182556460578402e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1724.8071428571432,
+   "time": 0.0561802,
+   "wall": 0.09813029999986611,
+   "iterations": 999,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.4210854715202004e-13,
+    2.960594732333751e-14,
+    3.9524753918935427e-16
+   ],
+   "viol": 1.4210854715202004e-13,
+   "relerr": 1.3182556460578402e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "sctap3",
+  "reference": 1424.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.03065329999981259,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1424.0000000046707,
+   "time": 0.0294845,
+   "wall": 0.06607879999955912,
+   "iterations": 12,
+   "method": "ipm",
+   "kkt": [
+    1.1102230246251565e-16,
+    0,
+    5.778323005245065e-12
+   ],
+   "viol": 2.220446049250313e-16,
+   "relerr": 3.2799930062885345e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1424,
+   "time": 0.1837075,
+   "wall": 0.2565445999998701,
+   "iterations": 1383,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    7.105427357601002e-15,
+    5.465713352000771e-15,
+    0
+   ],
+   "viol": 7.105427357601002e-15,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1424,
+   "time": 0.0600119,
+   "wall": 0.1016377999994802,
+   "iterations": 1383,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    7.105427357601002e-15,
+    5.465713352000771e-15,
+    0
+   ],
+   "viol": 7.105427357601002e-15,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "seba",
+  "reference": 15711.599999999999,
+  "ref_source": "HiGHS",
+  "highs_time": 0.012365199999749166,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 15711.60000324091,
+   "time": 0.0168309,
+   "wall": 0.054199100000005274,
+   "iterations": 11,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 1.5542289677483723e-12,
+   "relerr": 2.0627508402655923e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 15711.599999999999,
+   "time": 0.253795,
+   "wall": 0.3175989000001209,
+   "iterations": 7341,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 15711.599999999999,
+   "time": 0.2279958,
+   "wall": 0.2735648999996556,
+   "iterations": 7341,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "share1b",
+  "reference": -76589.31857918568,
+  "ref_source": "HiGHS",
+  "highs_time": 0.0044164000000819215,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -76589.3184062777,
+   "time": 0.0066819,
+   "wall": 0.030205999999452615,
+   "iterations": 14,
+   "method": "ipm",
+   "kkt": [
+    2.6315926752096685e-10,
+    1.2711116070818207e-07,
+    2.755745662608535e-09
+   ],
+   "viol": 2.6318558344771894e-10,
+   "relerr": 2.257599160440483e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -76589.31857918571,
+   "time": 0.2443022,
+   "wall": 0.3079938000000766,
+   "iterations": 13900,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    4.808221392899457e-10,
+    7.105427357601002e-15,
+    1.8999679722342218e-16
+   ],
+   "viol": 4.808702215038747e-10,
+   "relerr": 3.799985558905745e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -76589.31857918571,
+   "time": 0.3718349,
+   "wall": 0.4137885999998616,
+   "iterations": 13900,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    4.808221392899457e-10,
+    7.105427357601002e-15,
+    1.8999679722342218e-16
+   ],
+   "viol": 4.808702215038747e-10,
+   "relerr": 3.799985558905745e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "share2b",
+  "reference": -415.73224074141945,
+  "ref_source": "HiGHS",
+  "highs_time": 0.007053599999835569,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -415.73224062883037,
+   "time": 0.0016824,
+   "wall": 0.03930820000005042,
+   "iterations": 12,
+   "method": "ipm",
+   "kkt": [
+    3.552713678800501e-15,
+    1.221269307905004e-09,
+    7.542349870924436e-10
+   ],
+   "viol": 3.552713678800501e-15,
+   "relerr": 2.7082113577668174e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -415.7322407414172,
+   "time": 0.3909751,
+   "wall": 0.4641468000008899,
+   "iterations": 29350,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.1368683772161603e-12,
+    4.06907212327239e-14,
+    3.955679416669619e-15
+   ],
+   "viol": 1.1368683772161603e-12,
+   "relerr": 5.469233635518199e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -415.7322407414172,
+   "time": 0.8172294,
+   "wall": 0.8727318000001105,
+   "iterations": 29350,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.1368683772161603e-12,
+    4.06907212327239e-14,
+    3.955679416669619e-15
+   ],
+   "viol": 1.1368683772161603e-12,
+   "relerr": 5.469233635518199e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "shell",
+  "reference": 1208825346.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.017276500000207307,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1208825346.1792607,
+   "time": 0.0387415,
+   "wall": 0.06404580000071292,
+   "iterations": 15,
+   "method": "ipm",
+   "kkt": [
+    3.637978807091713e-11,
+    0,
+    2.448683789986167e-10
+   ],
+   "viol": 3.637978807091713e-11,
+   "relerr": 1.4829332569554527e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1208825346,
+   "time": 0.1713555,
+   "wall": 0.23705020000033983,
+   "iterations": 1465,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    0,
+    0,
+    0
+   ],
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1208825346,
+   "time": 0.0677828,
+   "wall": 0.10304520000045159,
+   "iterations": 1465,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    0,
+    0,
+    0
+   ],
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "ship04l",
+  "reference": 1793324.537970356,
+  "ref_source": "HiGHS",
+  "highs_time": 0.012883299999884912,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1793324.538957937,
+   "time": 0.0261302,
+   "wall": 0.060513499999615306,
+   "iterations": 11,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 2.7977620220553945e-14,
+   "relerr": 5.50698413181809e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1793324.5379703562,
+   "time": 0.2492195,
+   "wall": 0.3360382999999274,
+   "iterations": 5447,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 2.5979218776228663e-14,
+   "relerr": 1.2983185069077462e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1793324.5379703562,
+   "time": 0.1782155,
+   "wall": 0.21458160000020143,
+   "iterations": 5447,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 2.5979218776228663e-14,
+   "relerr": 1.2983185069077462e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "ship04s",
+  "reference": 1798714.7004453924,
+  "ref_source": "HiGHS",
+  "highs_time": 0.031835400000090885,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1798714.7044548725,
+   "time": 0.0154669,
+   "wall": 0.04056620000028488,
+   "iterations": 11,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 6.039613253960852e-14,
+   "relerr": 2.229080643797485e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1798714.7004453915,
+   "time": 0.1655685,
+   "wall": 0.22167010000066512,
+   "iterations": 4572,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 5.595524044110789e-14,
+   "relerr": 5.177711475782497e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1798714.7004453915,
+   "time": 0.1465235,
+   "wall": 0.17799099999956525,
+   "iterations": 4572,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 5.595524044110789e-14,
+   "relerr": 5.177711475782497e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "ship08l",
+  "reference": 1909055.2113891316,
+  "ref_source": "HiGHS",
+  "highs_time": 0.0395381999996971,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1909055.2113999284,
+   "time": 0.0405752,
+   "wall": 0.07478710000032152,
+   "iterations": 12,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 9.789391519632318e-14,
+   "relerr": 5.655584261316828e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1909055.211389132,
+   "time": 0.2534887,
+   "wall": 0.32566360000055283,
+   "iterations": 6662,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 6.235012506294879e-13,
+   "relerr": 2.4392237821602813e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1909055.211389132,
+   "time": 0.2398692,
+   "wall": 0.29660359999979846,
+   "iterations": 6662,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 6.235012506294879e-13,
+   "relerr": 2.4392237821602813e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "ship08s",
+  "reference": 1920098.2105346199,
+  "ref_source": "HiGHS",
+  "highs_time": 0.036526599999888276,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1920098.2105491832,
+   "time": 0.0220413,
+   "wall": 0.05018319999999221,
+   "iterations": 11,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 1.9345636204093353e-14,
+   "relerr": 7.584676580606246e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1920098.210534618,
+   "time": 0.1840855,
+   "wall": 0.27492220000021916,
+   "iterations": 2844,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 6.80566714095221e-14,
+   "relerr": 9.700780611176831e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1920098.210534618,
+   "time": 0.1005367,
+   "wall": 0.14319200000045385,
+   "iterations": 2844,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 6.80566714095221e-14,
+   "relerr": 9.700780611176831e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "ship12l",
+  "reference": 1470187.9193292647,
+  "ref_source": "HiGHS",
+  "highs_time": 0.04233489999978701,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1470187.919427106,
+   "time": 0.0568276,
+   "wall": 0.09468259999994189,
+   "iterations": 12,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 7.838174553853605e-14,
+   "relerr": 6.655017086120863e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1470187.9193292656,
+   "time": 0.283446,
+   "wall": 0.3993262000003597,
+   "iterations": 9264,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 7.416289804496046e-14,
+   "relerr": 6.334717911710025e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1470187.9193292658,
+   "time": 0.4487408,
+   "wall": 0.5066758000002665,
+   "iterations": 9260,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 7.416289804496046e-14,
+   "relerr": 7.91839738963753e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "ship12s",
+  "reference": 1489236.134406129,
+  "ref_source": "HiGHS",
+  "highs_time": 0.03982540000015433,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1489236.1393116892,
+   "time": 0.0334361,
+   "wall": 0.06591159999970841,
+   "iterations": 11,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 3.863576125695545e-14,
+   "relerr": 3.294011052633936e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1489236.1344061329,
+   "time": 0.2652276,
+   "wall": 0.3387398000004396,
+   "iterations": 10646,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 2.1066481892262345e-14,
+   "relerr": 2.6578195698254298e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1489236.1344061329,
+   "time": 0.4014298,
+   "wall": 0.4522086999995736,
+   "iterations": 10646,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 2.1066481892262345e-14,
+   "relerr": 2.6578195698254298e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "sierra",
+  "reference": 15394362.18363193,
+  "ref_source": "HiGHS",
+  "highs_time": 0.025400900000022375,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 15394362.183631927,
+   "time": 0.1675784,
+   "wall": 0.19691820000025473,
+   "iterations": 665,
+   "method": "ipm->dual-simplex",
+   "kkt": [
+    4.547473508864641e-13,
+    0,
+    2.3304512011925707e-10
+   ],
+   "viol": 4.547473508864641e-13,
+   "relerr": 2.4199055823324933e-16,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 15394362.183631929,
+   "time": 0.7905395,
+   "wall": 0.8700991999994585,
+   "iterations": 48411,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    2.4158453015843406e-13,
+    0,
+    9.749556967339415e-12
+   ],
+   "viol": 2.4158453015843406e-13,
+   "relerr": 1.2099527911662466e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 15394362.183631929,
+   "time": 1.5759956,
+   "wall": 1.6221495999998297,
+   "iterations": 48411,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    2.4158453015843406e-13,
+    0,
+    9.749556967339415e-12
+   ],
+   "viol": 2.4158453015843406e-13,
+   "relerr": 1.2099527911662466e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "stair",
+  "reference": -251.2669511929631,
+  "ref_source": "HiGHS",
+  "highs_time": 0.022666600000320614,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -251.2669511886567,
+   "time": 0.025828,
+   "wall": 0.056993600000168954,
+   "iterations": 11,
+   "method": "ipm",
+   "kkt": [
+    1.1368683772161603e-13,
+    5.273559366969494e-16,
+    5.2167260252845546e-11
+   ],
+   "viol": 1.1368683772161603e-13,
+   "relerr": 1.7138746456826344e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -251.2669511929634,
+   "time": 0.5330493,
+   "wall": 0.5940754000002926,
+   "iterations": 26315,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    2.0126122990404838e-12,
+    1.7985612998927536e-14,
+    3.830617193667066e-15
+   ],
+   "viol": 2.0126122990404838e-12,
+   "relerr": 1.2442496008730962e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -251.2669511929634,
+   "time": 0.7728357,
+   "wall": 0.8116282999999385,
+   "iterations": 26315,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    2.0126122990404838e-12,
+    1.7985612998927536e-14,
+    3.830617193667066e-15
+   ],
+   "viol": 2.0126122990404838e-12,
+   "relerr": 1.2442496008730962e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "standata",
+  "reference": 1257.6995,
+  "ref_source": "HiGHS",
+  "highs_time": 0.008066699999744742,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1257.6995001648957,
+   "time": 0.0139324,
+   "wall": 0.0519190000004528,
+   "iterations": 13,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 7.256315178520267e-13,
+   "relerr": 1.3110898869822666e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1257.6995,
+   "time": 0.1642142,
+   "wall": 0.2450963999999658,
+   "iterations": 1670,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 2.6645352591003757e-14,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1257.6995,
+   "time": 0.0912275,
+   "wall": 0.13335879999976896,
+   "iterations": 1670,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 2.6645352591003757e-14,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "standgub",
+  "reference": 1257.6995,
+  "ref_source": "HiGHS",
+  "highs_time": 0.015689800000018295,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1257.6995001648957,
+   "time": 0.0181649,
+   "wall": 0.06115669999962847,
+   "iterations": 13,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 7.256315178520267e-13,
+   "relerr": 1.3110898869822666e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1257.6995,
+   "time": 0.166936,
+   "wall": 0.23826370000006136,
+   "iterations": 1670,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 2.6645352591003757e-14,
+   "relerr": 0.0,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1257.6995,
+   "time": 0.0809306,
+   "wall": 0.11930449999999837,
+   "iterations": 1670,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 2.6645352591003757e-14,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "standmps",
+  "reference": 1406.0175,
+  "ref_source": "HiGHS",
+  "highs_time": 0.01263440000002447,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1406.0175000601525,
+   "time": 0.0208067,
+   "wall": 0.0536446000005526,
+   "iterations": 20,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 8.615516895586008e-14,
+   "relerr": 4.278226646055886e-11,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1406.0175000000002,
+   "time": 0.2158457,
+   "wall": 0.28312949999963166,
+   "iterations": 3838,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 1.3011813848606835e-13,
+   "relerr": 1.617146838095771e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1406.0175000000002,
+   "time": 0.1177984,
+   "wall": 0.15631839999969088,
+   "iterations": 3838,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 1.3011813848606835e-13,
+   "relerr": 1.617146838095771e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "stocfor1",
+  "reference": -41131.97621943641,
+  "ref_source": "HiGHS",
+  "highs_time": 0.004619299999831128,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -41131.97618402597,
+   "time": 0.0016397,
+   "wall": 0.04046980000020994,
+   "iterations": 9,
+   "method": "ipm",
+   "kkt": [
+    9.094947017729282e-13,
+    0,
+    1.4044575096973255e-09
+   ],
+   "viol": 9.094947017729282e-13,
+   "relerr": 8.60898128329588e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -41131.97621943623,
+   "time": 0.2084087,
+   "wall": 0.307400200000302,
+   "iterations": 4381,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    1.2641976354643703e-10,
+    4.462208380573429e-11,
+    8.667545017725303e-15
+   ],
+   "viol": 1.2641976354643703e-10,
+   "relerr": 4.422324358649015e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -41131.97621943623,
+   "time": 0.1383049,
+   "wall": 0.18007089999991877,
+   "iterations": 4381,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    1.2641976354643703e-10,
+    4.462208380573429e-11,
+    8.667545017725303e-15
+   ],
+   "viol": 1.2641976354643703e-10,
+   "relerr": 4.422324358649015e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "stocfor2",
+  "reference": -39024.40853788204,
+  "ref_source": "HiGHS",
+  "highs_time": 0.07863339999994423,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -39024.40853778107,
+   "time": 0.0696102,
+   "wall": 0.10069750000002387,
+   "iterations": 15,
+   "method": "ipm",
+   "kkt": [
+    1.8189894035458565e-12,
+    2.842170943040401e-14,
+    3.5274741051609665e-12
+   ],
+   "viol": 1.8189894035458565e-12,
+   "relerr": 2.587315672292909e-12,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": -39024.40853788211,
+   "time": 0.4641352,
+   "wall": 0.5696951999998419,
+   "iterations": 17074,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": [
+    3.183231456205249e-12,
+    2.3092638912203256e-13,
+    2.050857037878973e-15
+   ],
+   "viol": 3.183231456205249e-12,
+   "relerr": 1.8644632646053965e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": -39024.40853788211,
+   "time": 0.6422206,
+   "wall": 0.6958773999995174,
+   "iterations": 17074,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": [
+    3.183231456205249e-12,
+    2.3092638912203256e-13,
+    2.050857037878973e-15
+   ],
+   "viol": 3.183231456205249e-12,
+   "relerr": 1.8644632646053965e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "tuff",
+  "reference": 0.2921477650936128,
+  "ref_source": "HiGHS",
+  "highs_time": 0.011849200000142446,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 0.29214776625812433,
+   "time": 0.0145699,
+   "wall": 0.043174800000088,
+   "iterations": 12,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 2.3115557910010113e-10,
+   "relerr": 1.164511542750546e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 0.2921477650936131,
+   "time": 0.2825623,
+   "wall": 0.40017599999919184,
+   "iterations": 16729,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 9.094947017729282e-13,
+   "relerr": 3.3306690738754696e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 0.2921477650936131,
+   "time": 0.4713829,
+   "wall": 0.5038634000002276,
+   "iterations": 16729,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 9.094947017729282e-13,
+   "relerr": 3.3306690738754696e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "vtpbase",
+  "reference": 129831.46246136137,
+  "ref_source": "HiGHS",
+  "highs_time": 0.00435860000015964,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 129831.46250765224,
+   "time": 0.0019501,
+   "wall": 0.02852900000016234,
+   "iterations": 12,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 2.1827872842550278e-11,
+   "relerr": 3.5654581581941726e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 129831.46246136136,
+   "time": 0.227203,
+   "wall": 0.30562299999928655,
+   "iterations": 11722,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 9.549694368615746e-12,
+   "relerr": 1.1208311877945293e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 129831.46246136136,
+   "time": 0.4088252,
+   "wall": 0.46629639999991923,
+   "iterations": 11722,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 9.549694368615746e-12,
+   "relerr": 1.1208311877945293e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "wood1p",
+  "reference": 1.4429024115734148,
+  "ref_source": "HiGHS",
+  "highs_time": 0.08716739999999845,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1.4429024120842433,
+   "time": 0.1491201,
+   "wall": 0.204819900000075,
+   "iterations": 12,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 1.6075488162847762e-11,
+   "relerr": 3.5402844053849137e-10,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1.4429024115734082,
+   "time": 0.3917708,
+   "wall": 0.5152910999995584,
+   "iterations": 4867,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 4.392807393337715e-14,
+   "relerr": 4.6166241696741465e-15,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1.4429024115734082,
+   "time": 0.347352,
+   "wall": 0.43252060000031634,
+   "iterations": 4867,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 4.392807393337715e-14,
+   "relerr": 4.6166241696741465e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "woodw",
+  "reference": 1.3044763330842293,
+  "ref_source": "HiGHS",
+  "highs_time": 0.11678899999969872,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1.3044763445827072,
+   "time": 0.1510631,
+   "wall": 0.20602189999954135,
+   "iterations": 19,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 3.979039320256561e-13,
+   "relerr": 8.814631324420231e-09,
+   "agree": true
+  },
+  "pdhg-gpu": {
+   "status": "OPTIMAL",
+   "objective": 1.3044763330842297,
+   "time": 1.3584515,
+   "wall": 1.4881198000002769,
+   "iterations": 19038,
+   "method": "pdhg-gpu(NVIDIA GeForce RTX 3050 6GB Laptop GPU)+crossover",
+   "kkt": null,
+   "viol": 9.663381206337363e-13,
+   "relerr": 3.4043485388507084e-16,
+   "agree": true
+  },
+  "pdhg-cpu": {
+   "status": "OPTIMAL",
+   "objective": 1.3044763330842297,
+   "time": 1.333088,
+   "wall": 1.3958649999995032,
+   "iterations": 19038,
+   "method": "pdhg-cpu(12 threads)+crossover",
+   "kkt": null,
+   "viol": 9.663381206337363e-13,
+   "relerr": 3.4043485388507084e-16,
+   "agree": true
+  }
+ }
+]
