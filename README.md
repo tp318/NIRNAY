@@ -38,16 +38,16 @@ variables); mixed precision adds 1.15–1.55x.
 
 **Gurobi, FICO Xpress:** not benchmarked (no licence available here). No claims are made about them.
 
-## 3. Weaknesses and future work
+## 3. Future work and challenges
 
-- **MILP is the weakest area.** HiGHS/CPLEX solve instances we cannot (gesa2, p2756 in <1 s).
-  Needed: MILP presolve (probing, bound tightening), more cut families (knapsack cover, MIR, flow),
-  better primal heuristics (RINS, feasibility pump), parallel tree search.
-- **Presolve is basic** (singletons, forcing/redundant rows, fixed columns). Missing: parallel rows,
-  doubleton equations, dominated columns.
-- **Dual simplex speed** limits crossover on hard LPs (dfl001, greenbeb).
-- **IPM** still fails on some LPs and QPs (LISWET, CONT-*, large CVXQP) and has no GPU factorisation.
-- **GPU PDHG** is LP only (no QP yet); strict accuracy checks cost 2–3x iterations on some large LPs.
-- Not yet done: `.lp` file reader, Python API, MINLP.
+| Challenge | How we will solve it |
+|---|---|
+| Hard MILPs close slowly (HiGHS/CPLEX prove some in <1 s that take us >20 s) | MILP presolve with probing and bound tightening; more cut families (knapsack cover, MIR, flow cover); primal heuristics (RINS, feasibility pump); parallel tree search on CPU threads |
+| Presolve removes too little | Add parallel-row detection, doubleton equations and dominated columns, and report the nonzero reduction for every model |
+| Crossover is slow when the simplex needs many pivots | Faster dual simplex: hypersparse FTRAN/BTRAN, better LU update, bound-flipping tuning; smarter crossover basis from PDHG |
+| IPM stalls on a few ill-conditioned LPs and QPs | Dynamic KKT regularisation, better starting points, and a first-order QP fallback |
+| GPU PDHG handles LP only | Extend the GPU engine to convex QP (Halpern PDHG with a quadratic term) |
+| High accuracy costs extra PDHG iterations on the largest LPs | Earlier handoff to crossover, and feasibility polishing before the final check |
+| Integration into refinery workflows | `.lp` file reader, Python API (`import nirnay`), and a MINLP roadmap (spatial branch-and-bound, outer approximation) |
 
 Benchmark scripts: `tools/sweep.py`, `tools/compare.py`, `tools/check_netlib.py`.
