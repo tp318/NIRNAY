@@ -23,7 +23,7 @@ struct Direction {
 
 class Ipm {
 public:
-    Ipm(const Model& mdl, const IpmOptions& opt) : mdl_(mdl), opt_(opt) { setup(); }
+    Ipm(const Model& mdl, const IpmOptions& opt) : mdl_(mdl), opt_(opt), rho_(opt.reg), delta_(opt.reg) { setup(); }
     LpSolution run();
 
 private:
@@ -40,7 +40,7 @@ private:
     Vec kval_;
     LdlFactor F_;
     Vec D_;
-    double rho_ = 1e-10, delta_ = 1e-10;
+    double rho_, delta_;   // primal / dual regularisation of the KKT system
     // iterate
     Vec x_, y_, sl_, su_, zl_, zu_;
     // residuals
@@ -305,6 +305,13 @@ void Ipm::starting_point() {
 LpSolution Ipm::run() {
     Timer timer;
     LpSolution sol;
+    // Routing hook: the symbolic factor size is known before any numeric work. Above the cap the caller
+    // prefers another engine (GPU PDHG + crossover), so decline without factorising.
+    if (opt_.max_factor_nnz > 0 && F_.nnz_L() > opt_.max_factor_nnz) {
+        NLOG("IPM: nnz(L) %lld above routing cap %lld; declining\n", F_.nnz_L(), opt_.max_factor_nnz);
+        sol.status = Status::NotSolved;
+        return sol;
+    }
     starting_point();
 
     double bnorm = inf_norm(b_);
@@ -453,8 +460,31 @@ LpSolution Ipm::run() {
 }  // namespace
 
 LpSolution solve_ipm(const Model& mdl, const IpmOptions& opt) {
-    Ipm ipm(mdl, opt);
-    return ipm.run();
+    Timer t;
+    LpSolution s;
+    {
+        Ipm ipm(mdl, opt);
+        s = ipm.run();
+    }
+    // Numerical breakdown (typically near-singular pivots from free variables without a quadratic term, e.g.
+    // Maros-Meszaros QRECIPE): retry with 1e3x and 1e5x stronger regularisation. Runs that succeed at the
+    // default level never reach this, so they are unaffected.
+    // QP only: an LP has the dual simplex as a better fallback, and retrying here would eat its time
+    // (measured: bnl2, greenbea/b, pilot lost to the time limit on Netlib).
+    for (double reg : {1e-7, 1e-5}) {
+        if (!mdl.has_q() || s.status != Status::NumericalError || reg <= opt.reg) break;
+        const double left = opt.time_limit - t.seconds();
+        if (left <= 0) break;
+        NLOG("IPM: numerical breakdown; retrying with regularisation %.0e\n", reg);
+        IpmOptions o2 = opt;
+        o2.reg = reg;
+        o2.time_limit = left;
+        Ipm ipm(mdl, o2);
+        const int prev_iters = s.iterations;
+        s = ipm.run();
+        s.iterations += prev_iters;
+    }
+    return s;
 }
 
 }  // namespace nirnay

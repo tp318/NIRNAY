@@ -26,7 +26,7 @@ import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-EXE = os.path.join(ROOT, "bin", "nirnay.exe" if os.name == "nt" else "nirnay")
+EXE = os.environ.get("NIRNAY_EXE") or os.path.join(ROOT, "bin", "nirnay.exe" if os.name == "nt" else "nirnay")
 BUILTIN = {
     "default": [],
     "simplex": ["--method", "simplex"],
@@ -99,14 +99,16 @@ def main():
         for k, v in json.load(open(meta)).items():
             if v.get("OPT") is not None:
                 exp[k.lower()] = float(v["OPT"])
+                exp[k.lower().replace("-", "").replace("_", "")] = float(v["OPT"])
     refs = {} if exp else highs_refs(args.dir, files, 60)
     tag = args.tag or os.path.basename(os.path.normpath(args.dir))
     rows = []
     for f in files:
         base = os.path.basename(f)
         name = os.path.splitext(base)[0]
-        if name.lower() in exp:
-            ref, rsrc = exp[name.lower()], "published"
+        key = name.lower() if name.lower() in exp else name.lower().replace("-", "").replace("_", "")
+        if key in exp:
+            ref, rsrc = exp[key], "published"
         else:
             h = refs.get(base, {})
             ref, rsrc = (h.get("objective"), "HiGHS") if h.get("status") == "OPTIMAL" else (None, "HiGHS:" + str(h.get("status")))

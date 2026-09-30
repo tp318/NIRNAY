@@ -1,0 +1,1172 @@
+[
+ {
+  "instance": "10teams",
+  "reference": 923.9999999999999,
+  "ref_source": "HiGHS",
+  "highs_time": 24.500502700000652,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 20.0128001,
+   "wall": 20.064889799999946,
+   "iterations": 227328,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.0,
+   "agree": false
+  }
+ },
+ {
+  "instance": "air03",
+  "reference": 340160.0,
+  "ref_source": "HiGHS",
+  "highs_time": 1.8076299000003928,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 340160,
+   "time": 0.1819042,
+   "wall": 0.8626469999999244,
+   "iterations": 502,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "air04",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.035231300000305,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 20.0335319,
+   "wall": 20.105659499999092,
+   "iterations": 25984,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "air05",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.043288500000926,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 27586,
+   "time": 20.022679,
+   "wall": 20.094687099999646,
+   "iterations": 49344,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "arki001",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.013974299999973,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 7582036.060948893,
+   "time": 20.0697603,
+   "wall": 20.144493599998896,
+   "iterations": 142612,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 3.584427759051323e-07,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "bell3a",
+  "reference": 878430.3159999992,
+  "ref_source": "HiGHS",
+  "highs_time": 0.3811697000001004,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 878430.3159999998,
+   "time": 6.0048752,
+   "wall": 6.4075296000009985,
+   "iterations": 316963,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.2505552149377763e-12,
+   "relerr": 6.626326511421023e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "bell5",
+  "reference": 8966406.491519999,
+  "ref_source": "HiGHS",
+  "highs_time": 0.7416210999999748,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 8966406.491519999,
+   "time": 20.083361,
+   "wall": 20.126503800000137,
+   "iterations": 607744,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.8332002582610585e-12,
+   "relerr": 0.0,
+   "agree": false
+  }
+ },
+ {
+  "instance": "blend2",
+  "reference": 7.598984999999999,
+  "ref_source": "HiGHS",
+  "highs_time": 2.428890799999863,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 7.598985,
+   "time": 1.4528466,
+   "wall": 1.4831141999984538,
+   "iterations": 53320,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.168811913301744e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "cap6000",
+  "reference": -2451377.0,
+  "ref_source": "HiGHS",
+  "highs_time": 2.2882754000002024,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -2451317,
+   "time": 0.2702197,
+   "wall": 0.3256366000005073,
+   "iterations": 542,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 2.4476039385210843e-05,
+   "agree": true
+  }
+ },
+ {
+  "instance": "dano3mip",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.49271989999943,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 20.1120431,
+   "wall": 20.183170899999823,
+   "iterations": 0,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "danoint",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.04581010000038,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 69.5,
+   "time": 20.0043206,
+   "wall": 20.0515620999995,
+   "iterations": 181440,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.8474111129762605e-13,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "dcmulti",
+  "reference": 188181.99999999983,
+  "ref_source": "HiGHS",
+  "highs_time": 1.4761880000005476,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 188186.50000000003,
+   "time": 0.7635797,
+   "wall": 0.8009338000010757,
+   "iterations": 11960,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 2.8421709430404007e-13,
+   "relerr": 2.3913020374975984e-05,
+   "agree": true
+  }
+ },
+ {
+  "instance": "dsbmip",
+  "reference": -305.19817500948136,
+  "ref_source": "HiGHS",
+  "highs_time": 0.5224588000000949,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -305.19817500948113,
+   "time": 14.1207913,
+   "wall": 14.18025839999973,
+   "iterations": 151334,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 2.9103830456733704e-11,
+   "relerr": 7.450033914395734e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "egout",
+  "reference": 568.1007,
+  "ref_source": "HiGHS",
+  "highs_time": 0.01581369999985327,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 568.1007000000001,
+   "time": 0.1333321,
+   "wall": 0.17974390000017593,
+   "iterations": 3368,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 5.684341886080802e-14,
+   "relerr": 2.0011740475168582e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "enigma",
+  "reference": 0.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.6122761999995419,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 0,
+   "time": 0.1708572,
+   "wall": 0.2104949000004126,
+   "iterations": 17944,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "fast0507",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.296302900000228,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 545,
+   "time": 20.0235623,
+   "wall": 21.689634999998816,
+   "iterations": 11776,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "fiber",
+  "reference": 405935.1799999914,
+  "ref_source": "HiGHS",
+  "highs_time": 1.37821349999831,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 405935.17999999993,
+   "time": 9.9003067,
+   "wall": 9.989051099999415,
+   "iterations": 105016,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 2.842170943040401e-14,
+   "relerr": 2.1078552872110986e-14,
+   "agree": true
+  }
+ },
+ {
+  "instance": "fixnet6",
+  "reference": 3982.999999999994,
+  "ref_source": "HiGHS",
+  "highs_time": 4.300971599999684,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 4432.959595959595,
+   "time": 20.0715518,
+   "wall": 20.114626200000203,
+   "iterations": 206612,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.1368683772161603e-13,
+   "relerr": 0.11297002158162239,
+   "agree": false
+  }
+ },
+ {
+  "instance": "flugpl",
+  "reference": 1201500.000000001,
+  "ref_source": "HiGHS",
+  "highs_time": 0.07077000000026601,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1201500,
+   "time": 0.0435172,
+   "wall": 0.08073250000052212,
+   "iterations": 2110,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 9.094947017729282e-13,
+   "relerr": 7.751332289766774e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "gen",
+  "reference": 112313.362718,
+  "ref_source": "HiGHS",
+  "highs_time": 0.02369390000058047,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 112313.36271799979,
+   "time": 0.4058831,
+   "wall": 0.4495307999986835,
+   "iterations": 7664,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.5916157281026244e-12,
+   "relerr": 1.9434795926604388e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "gesa2",
+  "reference": 25779856.371697918,
+  "ref_source": "HiGHS",
+  "highs_time": 0.6937901000001148,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 20.0963024,
+   "wall": 20.137924500000736,
+   "iterations": 195660,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.0,
+   "agree": false
+  }
+ },
+ {
+  "instance": "gesa2_o",
+  "reference": 25779856.37169792,
+  "ref_source": "HiGHS",
+  "highs_time": 1.1981825999991997,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 25780031.43055198,
+   "time": 6.9551024,
+   "wall": 7.000994500000161,
+   "iterations": 60718,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 4.121147867408581e-13,
+   "relerr": 6.790528680003469e-06,
+   "agree": true
+  }
+ },
+ {
+  "instance": "gesa3",
+  "reference": 27991042.648382656,
+  "ref_source": "HiGHS",
+  "highs_time": 2.5157520000011573,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 27991042.648382682,
+   "time": 1.1144292,
+   "wall": 1.2140084999991814,
+   "iterations": 11050,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.1368683772161603e-13,
+   "relerr": 9.316206050916846e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "gesa3_o",
+  "reference": 27991042.648368813,
+  "ref_source": "HiGHS",
+  "highs_time": 5.526983200001268,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 27991430.124332774,
+   "time": 0.9906076,
+   "wall": 1.0370600000005652,
+   "iterations": 9621,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.7053025658242404e-13,
+   "relerr": 1.3842855688832774e-05,
+   "agree": true
+  }
+ },
+ {
+  "instance": "gt2",
+  "reference": 21166.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.0893049999995128,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 21166,
+   "time": 0.0076848,
+   "wall": 0.04535480000049574,
+   "iterations": 368,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "harp2",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.014236200000596,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 20.0780233,
+   "wall": 20.131839599998784,
+   "iterations": 255231,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "khb05250",
+  "reference": 106940226.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.23430329999973765,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 106940226.00000004,
+   "time": 0.2312838,
+   "wall": 0.297157299999526,
+   "iterations": 2960,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 2.697333868338953e-11,
+   "relerr": 4.1802308872568654e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "l152lav",
+  "reference": 4721.999999999988,
+  "ref_source": "HiGHS",
+  "highs_time": 3.6908604000000196,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 4722,
+   "time": 11.462104,
+   "wall": 11.576148699999976,
+   "iterations": 161224,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 2.503903245033481e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "lseu",
+  "reference": 1120.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.37173360000087996,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 1120,
+   "time": 0.717324,
+   "wall": 0.7499616999994032,
+   "iterations": 53576,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "markshare1",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.005582600000707,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 13.00000000000001,
+   "time": 20.3618366,
+   "wall": 20.40621470000042,
+   "iterations": 3273464,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "markshare2",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.00730029999977,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 30.999999999999996,
+   "time": 20.3551836,
+   "wall": 20.404583500001536,
+   "iterations": 2688579,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 2.398081733190338e-14,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "mas74",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.00847260000046,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 11801.185728999915,
+   "time": 20.1646454,
+   "wall": 20.21082050000041,
+   "iterations": 1264083,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 7.275957614183426e-11,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "mas76",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.012049100001605,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 40121.912262899976,
+   "time": 20.1485966,
+   "wall": 20.190233100000114,
+   "iterations": 1257069,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 4.3655745685100555e-11,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "misc03",
+  "reference": 3359.999999999866,
+  "ref_source": "HiGHS",
+  "highs_time": 0.5065033999999287,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 3360.000000000001,
+   "time": 0.8834652,
+   "wall": 0.9278919999997015,
+   "iterations": 42376,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 9.094947017729282e-13,
+   "relerr": 4.019641762300156e-14,
+   "agree": true
+  }
+ },
+ {
+  "instance": "misc06",
+  "reference": 12850.860737382538,
+  "ref_source": "HiGHS",
+  "highs_time": 0.5624898000005487,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 12850.860737382533,
+   "time": 0.1125985,
+   "wall": 0.1544570999994903,
+   "iterations": 1848,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 5.6417093219351955e-12,
+   "relerr": 4.246383430771692e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "misc07",
+  "reference": 2809.999999999999,
+  "ref_source": "HiGHS",
+  "highs_time": 23.683756799999173,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 2809.9999999999955,
+   "time": 20.021472,
+   "wall": 20.069601499999408,
+   "iterations": 509683,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 4.547473508864641e-12,
+   "relerr": 1.294654379747941e-15,
+   "agree": false
+  }
+ },
+ {
+  "instance": "mitre",
+  "reference": 115155.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.685418999999456,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 115155,
+   "time": 4.6542424,
+   "wall": 4.72340179999992,
+   "iterations": 22160,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "mkc",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.040102599999955,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 20.0122352,
+   "wall": 20.079879300001267,
+   "iterations": 72768,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "mod008",
+  "reference": 306.99999999999375,
+  "ref_source": "HiGHS",
+  "highs_time": 1.1092068999987532,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 307,
+   "time": 1.1406675,
+   "wall": 1.1846246999994037,
+   "iterations": 54440,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 2.036734877748863e-14,
+   "agree": true
+  }
+ },
+ {
+  "instance": "mod010",
+  "reference": 6548.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.21761460000016086,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 6548,
+   "time": 0.1681495,
+   "wall": 0.22093500000119093,
+   "iterations": 1387,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "mod011",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.05328980000013,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": -54231426.184661925,
+   "time": 20.0435878,
+   "wall": 20.113137700000152,
+   "iterations": 53504,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 3.6670826375484467e-09,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "modglob",
+  "reference": 20740508.08630824,
+  "ref_source": "HiGHS",
+  "highs_time": 0.5550470999987738,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 20742697.186797,
+   "time": 20.0569505,
+   "wall": 20.09684879999986,
+   "iterations": 391808,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.77351466845721e-11,
+   "relerr": 0.0001055471003723724,
+   "agree": false
+  }
+ },
+ {
+  "instance": "noswot",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.00799790000019,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": -41,
+   "time": 20.0592527,
+   "wall": 20.098338499999954,
+   "iterations": 660292,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 6.394884621840902e-14,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "nw04",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 31.290653399999428,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 20.0875164,
+   "wall": 20.582029799999873,
+   "iterations": 6144,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "p0033",
+  "reference": 3089.0000000000077,
+  "ref_source": "HiGHS",
+  "highs_time": 0.014762099999643397,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 3089,
+   "time": 0.0148037,
+   "wall": 0.05080599999928381,
+   "iterations": 2118,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 2.5026561881093787e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "p0201",
+  "reference": 7615.0,
+  "ref_source": "HiGHS",
+  "highs_time": 1.777730400001019,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 7615,
+   "time": 1.3082181,
+   "wall": 1.3462624000003416,
+   "iterations": 36440,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "p0282",
+  "reference": 258411.00000000003,
+  "ref_source": "HiGHS",
+  "highs_time": 0.20465390000026673,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 258411,
+   "time": 0.2807743,
+   "wall": 0.32371170000078564,
+   "iterations": 13002,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.1262612836424805e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "p0548",
+  "reference": 8691.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.06745210000008228,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 8691,
+   "time": 1.0363527,
+   "wall": 1.068564699999115,
+   "iterations": 21898,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "p2756",
+  "reference": 3124.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.3213709999999992,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 20.1776436,
+   "wall": 20.222344800000428,
+   "iterations": 159427,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.0,
+   "agree": false
+  }
+ },
+ {
+  "instance": "pk1",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.00798399999985,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 11.000000000000007,
+   "time": 20.0627596,
+   "wall": 20.105616499999087,
+   "iterations": 1336204,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 2.1316282072803006e-14,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "pp08a",
+  "reference": 7349.999999999955,
+  "ref_source": "HiGHS",
+  "highs_time": 1.2480531000001065,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 7350,
+   "time": 20.0291876,
+   "wall": 20.072260099999767,
+   "iterations": 397418,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.7053025658242404e-13,
+   "relerr": 6.063298011819558e-15,
+   "agree": false
+  }
+ },
+ {
+  "instance": "pp08aCUTS",
+  "reference": 7349.999999999973,
+  "ref_source": "HiGHS",
+  "highs_time": 1.3137707999994745,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 7360.000000000002,
+   "time": 20.0281524,
+   "wall": 20.07601160000013,
+   "iterations": 312377,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 7.958078640513122e-13,
+   "relerr": 0.0013605442176910397,
+   "agree": false
+  }
+ },
+ {
+  "instance": "qiu",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.017717700000503,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": -110.84203694699839,
+   "time": 20.0035501,
+   "wall": 20.057374200001505,
+   "iterations": 150998,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 3.197442310920451e-14,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "qnet1",
+  "reference": 16029.692680999957,
+  "ref_source": "HiGHS",
+  "highs_time": 1.1735836000007112,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 16029.692681000002,
+   "time": 5.0088206,
+   "wall": 5.058092900000702,
+   "iterations": 61281,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 6.821210263296962e-13,
+   "relerr": 2.836906233551673e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "qnet1_o",
+  "reference": 16029.692680999993,
+  "ref_source": "HiGHS",
+  "highs_time": 0.8537372999999207,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 16029.692681000004,
+   "time": 8.1195961,
+   "wall": 8.161690499999168,
+   "iterations": 111810,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 3.410605131648481e-13,
+   "relerr": 6.808574960524e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "rentacar",
+  "reference": 30356760.984148562,
+  "ref_source": "HiGHS",
+  "highs_time": 3.418474599999172,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 30356760.984148525,
+   "time": 3.4668008,
+   "wall": 3.5205021999991004,
+   "iterations": 15736,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 8.940696716308594e-08,
+   "relerr": 1.2271698882522925e-15,
+   "agree": true
+  }
+ },
+ {
+  "instance": "rgn",
+  "reference": 82.1999992399913,
+  "ref_source": "HiGHS",
+  "highs_time": 0.3366931000000477,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 82.19999924,
+   "time": 0.5166801,
+   "wall": 0.5522803999992902,
+   "iterations": 30256,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 4.440892098500626e-15,
+   "relerr": 1.0580344484325018e-13,
+   "agree": true
+  }
+ },
+ {
+  "instance": "rout",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.02126270000008,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 1081.9000000000005,
+   "time": 20.0427245,
+   "wall": 20.0900926000013,
+   "iterations": 489583,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 9.094947017729282e-13,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "set1ch",
+  "reference": 54537.75,
+  "ref_source": "HiGHS",
+  "highs_time": 0.5696346000004269,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 74323.2846489186,
+   "time": 20.0156909,
+   "wall": 20.046056099999987,
+   "iterations": 184365,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.4551915228366852e-11,
+   "relerr": 0.3627860454257575,
+   "agree": false
+  }
+ },
+ {
+  "instance": "seymour",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.05215710000084,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 744,
+   "time": 20.0146836,
+   "wall": 20.068951400000515,
+   "iterations": 36416,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "stein27",
+  "reference": 17.999999999999993,
+  "ref_source": "HiGHS",
+  "highs_time": 0.6024025999995501,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 18,
+   "time": 0.5093202,
+   "wall": 0.5481681000001117,
+   "iterations": 18464,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 3.9474596431116695e-16,
+   "agree": true
+  }
+ },
+ {
+  "instance": "stein45",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.005830699999933,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 30,
+   "time": 16.7596639,
+   "wall": 16.803317899999456,
+   "iterations": 391888,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "swath",
+  "reference": null,
+  "ref_source": "HiGHS:LIMIT",
+  "highs_time": 30.06657659999837,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 20.0191747,
+   "wall": 20.089759499998763,
+   "iterations": 110035,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": null,
+   "agree": false
+  }
+ },
+ {
+  "instance": "vpm1",
+  "reference": 20.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.020776899998963927,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 20,
+   "time": 0.8350146,
+   "wall": 0.8787879000010435,
+   "iterations": 24110,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 9.868017514236271e-11,
+   "relerr": 0.0,
+   "agree": true
+  }
+ },
+ {
+  "instance": "vpm2",
+  "reference": 13.75,
+  "ref_source": "HiGHS",
+  "highs_time": 1.9949182000000292,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 13.75,
+   "time": 20.0610761,
+   "wall": 20.10119290000148,
+   "iterations": 532096,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.3073986337985843e-12,
+   "relerr": 0.0,
+   "agree": false
+  }
+ }
+]

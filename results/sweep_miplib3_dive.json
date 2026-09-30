@@ -1,0 +1,182 @@
+[
+ {
+  "instance": "10teams",
+  "reference": 923.9999999999999,
+  "ref_source": "HiGHS",
+  "highs_time": 24.500502700000652,
+  "default": {
+   "status": "TIME_LIMIT",
+   "objective": 0,
+   "time": 20.0090272,
+   "wall": 20.116585899999336,
+   "iterations": 187008,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 1.0,
+   "agree": false
+  }
+ },
+ {
+  "instance": "bell5",
+  "reference": 8966406.491519999,
+  "ref_source": "HiGHS",
+  "highs_time": 0.7416210999999748,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 8966406.491519999,
+   "time": 20.0947232,
+   "wall": 20.13009559999955,
+   "iterations": 556475,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.8332002582610585e-12,
+   "relerr": 0.0,
+   "agree": false
+  }
+ },
+ {
+  "instance": "fixnet6",
+  "reference": 3982.999999999994,
+  "ref_source": "HiGHS",
+  "highs_time": 4.300971599999684,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 4432.959595959595,
+   "time": 20.0887303,
+   "wall": 20.128832200000033,
+   "iterations": 192859,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.1368683772161603e-13,
+   "relerr": 0.11297002158162239,
+   "agree": false
+  }
+ },
+ {
+  "instance": "gesa2",
+  "reference": 25779856.371697918,
+  "ref_source": "HiGHS",
+  "highs_time": 0.6937901000001148,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 26515081.135248154,
+   "time": 20.0697067,
+   "wall": 20.123201599999447,
+   "iterations": 169611,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 2.842170943040401e-14,
+   "relerr": 0.02851935064919112,
+   "agree": false
+  }
+ },
+ {
+  "instance": "misc07",
+  "reference": 2809.999999999999,
+  "ref_source": "HiGHS",
+  "highs_time": 23.683756799999173,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 2810.0000000000023,
+   "time": 20.0212137,
+   "wall": 20.052747600000657,
+   "iterations": 456835,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 2.2737367544323206e-12,
+   "relerr": 1.1328225822794484e-15,
+   "agree": false
+  }
+ },
+ {
+  "instance": "modglob",
+  "reference": 20740508.08630824,
+  "ref_source": "HiGHS",
+  "highs_time": 0.5550470999987738,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 20742697.186797,
+   "time": 20.0659741,
+   "wall": 20.1021424999999,
+   "iterations": 412760,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.77351466845721e-11,
+   "relerr": 0.0001055471003723724,
+   "agree": false
+  }
+ },
+ {
+  "instance": "p2756",
+  "reference": 3124.0,
+  "ref_source": "HiGHS",
+  "highs_time": 0.3213709999999992,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 36931,
+   "time": 20.1519916,
+   "wall": 20.203099999998813,
+   "iterations": 172538,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 0,
+   "relerr": 10.821702944942382,
+   "agree": false
+  }
+ },
+ {
+  "instance": "pp08aCUTS",
+  "reference": 7349.999999999973,
+  "ref_source": "HiGHS",
+  "highs_time": 1.3137707999994745,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 7360.000000000002,
+   "time": 20.0293401,
+   "wall": 20.058909499999572,
+   "iterations": 334512,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 7.958078640513122e-13,
+   "relerr": 0.0013605442176910397,
+   "agree": false
+  }
+ },
+ {
+  "instance": "set1ch",
+  "reference": 54537.75,
+  "ref_source": "HiGHS",
+  "highs_time": 0.5696346000004269,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 74323.2846489186,
+   "time": 20.0169924,
+   "wall": 20.058342999998786,
+   "iterations": 165477,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 1.4551915228366852e-11,
+   "relerr": 0.3627860454257575,
+   "agree": false
+  }
+ },
+ {
+  "instance": "vpm2",
+  "reference": 13.75,
+  "ref_source": "HiGHS",
+  "highs_time": 1.9949182000000292,
+  "default": {
+   "status": "FEASIBLE",
+   "objective": 14,
+   "time": 20.0500886,
+   "wall": 20.083937700001115,
+   "iterations": 585608,
+   "method": "branch-and-cut",
+   "kkt": null,
+   "viol": 2.0463630789890885e-12,
+   "relerr": 0.01818181818181818,
+   "agree": false
+  }
+ }
+]

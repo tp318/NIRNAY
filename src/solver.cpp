@@ -244,6 +244,8 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
     std::vector<double> xr, yr;
     Timer ts;
     bool pdhg_needs_check = false;
+    bool routed_to_pdhg = false;
+    double pdhg_tol_used = 1e-4;
     if (red.n == 0) {
         res.status = Status::Optimal;
         res.method = "presolve";
@@ -284,15 +286,22 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
     } else {
         std::string method = opt.method;
         if (method == "auto") method = "ipm";
+        // Heterogeneous routing (auto, LP only): the IPM declines when its symbolic factor would exceed
+        // kRouteFactorNnz, and the model goes to PDHG (GPU if present) + simplex crossover instead. The
+        // threshold comes from Netlib: every LP where PDHG + crossover beat the IPM route had nnz(L) > 0.5M
+        // (maros-r7 1.2M, pilot87 0.56M, mcf_25x25 3.6M); every LP the IPM handled well had nnz(L) < 0.2M.
+        const long long kRouteFactorNnz = 500000;
+        bool ipm_uncapped = false;
+        for (int pass = 0; pass < 3; ++pass) {
         if (method == "pdhg") {
             if (red.has_q()) {
                 res.status = Status::NotSolved;
                 res.note = "PDHG engine currently supports LP only";
             } else {
                 PdhgOptions po;
-                po.tol = opt.pdhg_tol;
                 po.max_iter = opt.pdhg_max_iter;
-                po.time_limit = opt.time_limit;
+                // routed: PDHG gets half the budget, the uncapped IPM keeps the rest as a fallback
+                po.time_limit = routed_to_pdhg ? 0.5 * opt.time_limit : opt.time_limit;
                 po.device = opt.device;
                 po.alg = opt.pdhg_alg;
                 po.reflection = opt.pdhg_reflection;
@@ -302,6 +311,9 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
                 po.precision = opt.pdhg_precision;
                 const bool xo = opt.crossover == "on" || (opt.crossover == "auto" && (long long)red.m + red.n <= 500000);
                 po.strict = !xo;   // crossover only needs the active set; it certifies the final answer itself
+                // Crossover only needs the active set, so 1e-4 suffices; a standalone PDHG answer defaults to 1e-6.
+                po.tol = opt.pdhg_tol > 0 ? opt.pdhg_tol : (xo ? 1e-4 : 1e-6);
+                pdhg_tol_used = po.tol;
                 PdhgInfo info;
                 LpSolution s = solve_pdhg(red, po, info);
                 res.method = "pdhg-" + info.device;
@@ -314,7 +326,8 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
                 res.note = buf;
                 // Crossover: finish exactly with the dual simplex warm-started from a basis guessed from the
                 // PDHG point. Runs whenever PDHG produced a point, including after a time/iteration limit.
-                const double left = opt.time_limit - ts.seconds();
+                // routed: crossover stops at 75% of the budget so the IPM fallback keeps a share
+                const double left = (routed_to_pdhg ? 0.75 : 1.0) * opt.time_limit - ts.seconds();
                 if (xo && !s.x.empty() && left > 0) {
                     Timer tx;
                     Scaling sc = compute_scaling(red, false);
@@ -350,7 +363,14 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
             io.tol = opt.tol;
             io.time_limit = opt.time_limit;
             io.log_scale = (red.maximize ? -1.0 : 1.0) / sc.obj;
+            if (opt.method == "auto" && !red.has_q() && !ipm_uncapped) io.max_factor_nnz = kRouteFactorNnz;
+            io.time_limit = std::max(0.0, opt.time_limit - ts.seconds());
             LpSolution s = solve_ipm(sm, io);
+            if (io.max_factor_nnz > 0 && s.status == Status::NotSolved) {
+                method = "pdhg";
+                routed_to_pdhg = true;
+                continue;
+            }
             res.method = "ipm";
             res.status = s.status;
             res.iterations = s.iterations;
@@ -363,7 +383,9 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
                 // IPM could not certify: fall back to the dual simplex, which returns
                 // exact infeasibility / unboundedness certificates.
                 NLOG("IPM ended with %s; switching to dual simplex\n", status_name(s.status));
-                LpSolution s2 = solve_simplex_lp(sm, sc, opt);
+                SolverOptions o2 = opt;
+                o2.time_limit = std::max(0.0, opt.time_limit - ts.seconds());   // what is left, not the full limit
+                LpSolution s2 = solve_simplex_lp(sm, sc, o2);
                 res.method = "ipm->dual-simplex";
                 res.status = s2.status;
                 res.iterations += s2.iterations;
@@ -396,6 +418,18 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
             res.status = Status::NotSolved;
             res.note = "unknown method '" + method + "'";
         }
+        if (method == "pdhg" && routed_to_pdhg && (res.status != Status::Optimal || pdhg_needs_check) &&
+            opt.time_limit - ts.seconds() > 0.5) {
+            NLOG("Routing: PDHG + crossover not certified (%s); falling back to the IPM\n", status_name(res.status));
+            method = "ipm";
+            ipm_uncapped = true;
+            pdhg_needs_check = false;
+            xr.clear(); yr.clear();
+            continue;
+        }
+        break;
+        }
+        if (routed_to_pdhg) res.note = "routed to PDHG (large IPM factor); " + res.note;
     }
     res.time_solve = ts.seconds();
 
@@ -409,7 +443,7 @@ SolveResult solve(const Model& model, const SolverOptions& opt) {
     // (An unavailable check counts as a failure: greenbeb reached this point with no KKT report and a row
     // violated by 0.63 when crossover ran out of time.)
     if (pdhg_needs_check && (!res.kkt.available ||
-        std::max(res.kkt.primal_inf, std::max(res.kkt.dual_inf, res.kkt.rel_gap)) > 10 * opt.pdhg_tol)) {
+        std::max(res.kkt.primal_inf, std::max(res.kkt.dual_inf, res.kkt.rel_gap)) > 10 * pdhg_tol_used)) {
         res.status = Status::Feasible;
         res.note += "; approximate (original-model KKT above tolerance)";
     }

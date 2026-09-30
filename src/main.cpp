@@ -2,11 +2,13 @@
 //
 //   nirnay <model.mps> [options]
 //
+#include <algorithm>
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <string>
+#include <vector>
 
 #ifdef _OPENMP
 #include <omp.h>
@@ -179,13 +181,31 @@ int main(int argc, char** argv) {
     if (!solfile.empty() && !r.x.empty()) {
         FILE* f = std::fopen(solfile.c_str(), "w");
         if (f) {
-            std::fprintf(f, "# NIRNAY solution  status %s  objective %.17g\n", status_name(r.status), r.objective);
-            for (int j = 0; j < mdl.n; ++j)
-                std::fprintf(f, "%s %.17g\n", mdl.col_names.empty() ? ("C" + std::to_string(j)).c_str() : mdl.col_names[j].c_str(), r.x[j]);
+            auto cname = [&](int j) { return mdl.col_names.empty() ? "C" + std::to_string(j) : mdl.col_names[j]; };
+            auto rname = [&](int i) { return mdl.row_names.empty() ? "R" + std::to_string(i) : mdl.row_names[i]; };
+            // reduced costs d = c + Qx - A'y (only meaningful with valid duals)
+            std::vector<double> d;
             if (r.duals_valid) {
-                std::fprintf(f, "# row duals\n");
-                for (int i = 0; i < mdl.m; ++i)
-                    std::fprintf(f, "%s %.17g\n", mdl.row_names.empty() ? ("R" + std::to_string(i)).c_str() : mdl.row_names[i].c_str(), r.y[i]);
+                d.assign(mdl.c.begin(), mdl.c.end());
+                if (mdl.has_q()) mdl.Q.mul_add(r.x.data(), d.data());
+                mdl.A.mul_t_add(r.y.data(), d.data(), -1.0);
+            }
+            std::fprintf(f, "# NIRNAY solution  status %s  objective %.17g\n", status_name(r.status), r.objective);
+            std::fprintf(f, "# columns: name value%s\n", r.duals_valid ? " reduced_cost" : "");
+            for (int j = 0; j < mdl.n; ++j) {
+                if (r.duals_valid) std::fprintf(f, "%s %.17g %.17g\n", cname(j).c_str(), r.x[j], d[j]);
+                else std::fprintf(f, "%s %.17g\n", cname(j).c_str(), r.x[j]);
+            }
+            // rows: activity, slack to the nearest finite bound (0 = binding), dual
+            const std::vector<double> act = mdl.activities(r.x);
+            std::fprintf(f, "# rows: name activity slack%s\n", r.duals_valid ? " dual" : "");
+            for (int i = 0; i < mdl.m; ++i) {
+                double slack = kInf;
+                if (is_finite(mdl.row_lo[i])) slack = std::min(slack, act[i] - mdl.row_lo[i]);
+                if (is_finite(mdl.row_up[i])) slack = std::min(slack, mdl.row_up[i] - act[i]);
+                if (!is_finite(slack)) slack = 0;   // free row
+                if (r.duals_valid) std::fprintf(f, "%s %.17g %.17g %.17g\n", rname(i).c_str(), act[i], slack, r.y[i]);
+                else std::fprintf(f, "%s %.17g %.17g\n", rname(i).c_str(), act[i], slack);
             }
             std::fclose(f);
         }

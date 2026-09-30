@@ -15,7 +15,7 @@ struct SolverOptions {
     int presolve = 1;              // 0 = mandatory reductions only, 1 = full
     double time_limit = 1e30;      // seconds
     double tol = 1e-8;             // IPM / simplex optimality tolerance
-    double pdhg_tol = 1e-4;        // PDHG relative KKT tolerance
+    double pdhg_tol = -1;          // PDHG relative KKT tolerance; <= 0: 1e-4 with crossover, 1e-6 without
     int pdhg_max_iter = 1000000;
     std::string pdhg_alg = "halpern";   // halpern | pdlp
     double pdhg_reflection = 1.0;

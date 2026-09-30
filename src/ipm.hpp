@@ -22,6 +22,8 @@ struct IpmOptions {
     int max_iter = 300;
     double time_limit = 1e30;
     int max_correctors = 2;
+    double reg = 1e-10;            // KKT primal/dual regularisation (raised automatically after a breakdown)
+    long long max_factor_nnz = 0;  // > 0: return NotSolved at once if nnz(L) exceeds it (engine routing)
     double log_scale = 1.0;  // iteration log shows log_scale * (obj + offset): the user-space objective
 };
 

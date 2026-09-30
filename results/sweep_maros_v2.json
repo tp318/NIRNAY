@@ -1,0 +1,82 @@
+[
+ {
+  "instance": "QRECIPE",
+  "reference": -266.616,
+  "ref_source": "published",
+  "highs_time": null,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": -266.6159994351705,
+   "time": 0.0071348,
+   "wall": 0.053031600000394974,
+   "iterations": 18,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 7.275957614183426e-12,
+   "relerr": 2.118513004474683e-09,
+   "agree": true
+  }
+ },
+ {
+  "instance": "QSCFXM3",
+  "reference": 30816355.0,
+  "ref_source": "published",
+  "highs_time": null,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 30816354.481257997,
+   "time": 0.2527205,
+   "wall": 0.3027062000001024,
+   "iterations": 49,
+   "method": "ipm",
+   "kkt": null,
+   "viol": 2.9103830456733704e-11,
+   "relerr": 1.6833334200192958e-08,
+   "agree": true
+  }
+ },
+ {
+  "instance": "QSHARE2B",
+  "reference": 11703.692,
+  "ref_source": "published",
+  "highs_time": null,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 11703.691721577292,
+   "time": 0.0105265,
+   "wall": 0.050423099999534315,
+   "iterations": 39,
+   "method": "ipm",
+   "kkt": [
+    7.105427357601002e-15,
+    3.215076205265177e-09,
+    1.1116563606248328e-11
+   ],
+   "viol": 7.105427357601002e-15,
+   "relerr": 2.3789305733355216e-08,
+   "agree": true
+  }
+ },
+ {
+  "instance": "QSIERRA",
+  "reference": 23750458.0,
+  "ref_source": "published",
+  "highs_time": null,
+  "default": {
+   "status": "OPTIMAL",
+   "objective": 23750458.31710071,
+   "time": 0.6076468,
+   "wall": 0.6594084999996994,
+   "iterations": 226,
+   "method": "ipm",
+   "kkt": [
+    3.652380955865862e-13,
+    9.66310999664852e-07,
+    7.453623569420955e-09
+   ],
+   "viol": 4.547473508864641e-13,
+   "relerr": 1.3351351420964541e-08,
+   "agree": true
+  }
+ }
+]
