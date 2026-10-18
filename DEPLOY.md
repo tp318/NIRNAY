@@ -142,10 +142,4 @@ Pushing a tag `v*` runs `.github/workflows/release.yml`, which builds both binar
 them against the Netlib reference values, attaches them to a GitHub Release, and pushes
 `ghcr.io/tp318/nirnay:<version>` and `:latest`.
 
-### Making it reachable for judges (repository owner)
 
-The repository is private, so the links above work only for people with access. Before
-sharing, either make the repository public (Settings → General → Danger Zone → Change
-visibility), or keep it private and add the judges as collaborators. After the first release,
-also make the container package public: GitHub profile → Packages → `nirnay` → Package
-settings → Change visibility → Public.
