@@ -18,7 +18,7 @@
 #include "solver.hpp"
 
 #ifndef NIRNAY_VERSION
-#define NIRNAY_VERSION "0.1.0"
+#define NIRNAY_VERSION "0.2.1"
 #endif
 
 using namespace nirnay;
