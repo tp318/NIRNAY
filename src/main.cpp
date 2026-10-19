@@ -167,7 +167,11 @@ int main(int argc, char** argv) {
     std::printf("Status        : %s\n", status_name(r.status));
     std::printf("Method        : %s\n", r.method.c_str());
     if (!r.x.empty()) {
+        auto cname = [&](int j) { return mdl.col_names.empty() ? ("x" + std::to_string(j)) : mdl.col_names[j]; };
         std::printf("Objective     : %.12e\n", r.objective);
+        std::printf("Decision variables (primal values):\n");
+        for (int j = 0; j < mdl.n; ++j)
+            std::printf("  %s = %.12e\n", cname(j).c_str(), r.x[j]);
         if (r.int_cols > 0) std::printf("Best bound    : %.12e   (gap %.4g%%, nodes %lld, cuts %d)\n", r.bound, 100 * r.mip_gap, r.nodes, r.cuts_added);
         std::printf("Violations    : row %.2e  bound %.2e  integrality %.2e\n", r.viol.max_row, r.viol.max_bound, r.viol.max_int);
         if (r.kkt.available)
